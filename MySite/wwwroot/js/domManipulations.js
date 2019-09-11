@@ -21,11 +21,13 @@ function init() {
     showView('home');
 
     window.onresize = function() {
-        let $header = $('#header');
+        const $header = $('#header'), $main = $('#main-content');
         if (window.innerWidth >= LARGE_WIDTH) {
             $header.addClass('fixed-top');
+            $main.css('margin-top', '60px');
         } else {
             $header.removeClass('fixed-top');
+            $main.css('margin-top', '0px');
         }
     }
 }
