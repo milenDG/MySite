@@ -46,3 +46,7 @@ function showView(id) {
     $('#content-holder').append($view);
     $view.show();
 }
+
+function test() {
+
+}
