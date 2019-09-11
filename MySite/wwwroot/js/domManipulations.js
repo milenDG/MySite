@@ -45,6 +45,6 @@ function showView(id) {
     clearViews();
     const $view = $views[id];
     $navs[id].addClass('active');
-    $('#content-holder').append($view);
+    $('#text-content-holder').append($view);
     $view.show();
 }
