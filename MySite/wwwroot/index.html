@@ -3,50 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <title>Milen Georgiev</title>
-    <link rel="icon" type="image/x-icon" href="media/logo2.png">
+    <link rel="icon" type="image/x-icon" href="media/logo2.png" />
     <script src="js/jQuery.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="js/bootstrap.min.js"></script>
     <script src="js/domManipulations.js"></script>
     <script src="js/linkedIn.js"></script>
-    <style>
-        #main-content {
-            margin-top: 90px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        img { 
-            opacity: 1; 
-        } 
-        img:hover { 
-            opacity: 0.7; 
-        }
-
-        img.svg {
-            opacity: 1;
-        }
-        img.svg:hover {
-            opacity: 0.4;
-        }
-        .LI-badge-container-vertical-light {
-            box-shadow: 0 10px 20px rgba(26, 83, 92, 0.4) !important;
-        }
-
-        .secondary-text {
-            color: rgba(138, 117, 0, 0.75) !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/customCss.css" />
 </head>
-<body onload="init();" style="background-color: #4ECDC4">
-<header id="header" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="padding-top: 8px; padding-bottom: 8px; background-color: #1A535C !important">
-    <a href="#" onclick="showView('home')">
+<body onload="init()">
+<header id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" onclick="replaceView('home')">
         <img src="/media/logo2.png" class="rounded float-left mr-0 mr-md-2" alt="logo.png" height="50" width="50">
     </a>
-    <a class="navbar-brand font-weight-bold font-italic text-light" href="#" onclick="showView('home')"  style="margin-bottom: 2px; margin-left: 10px;">Milen Georgiev</a>
+    <a class="navbar-brand font-weight-bold font-italic text-light" href="#" onclick="replaceView('home')"  style="margin-bottom: 2px; margin-left: 10px;">Milen Georgiev</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -54,20 +24,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a id="home-nav" class="nav-link" href="#" onclick="showView('home')">Home</a>
+                <a id="home-nav" class="nav-link" href="#" onclick="replaceView('home')">Home</a>
             </li>
             <li class="nav-item">
-                <a id="experience-nav" class="nav-link" href="#" onclick="showView('experience')">Experience</a>
+                <a id="experience-nav" class="nav-link" href="#" onclick="replaceView('experience')">Experience</a>
             </li>
             <li class="nav-item">
-                <a id="education-nav" class="nav-link" href="#" onclick="showView('education')">Education</a>
+                <a id="education-nav" class="nav-link" href="#" onclick="replaceView('education')">Education</a>
             </li>
             <li class="nav-item dropdown">
                 <a id="projects-nav" class="nav-link dropdown-toggle" onclick="dropdownClicked()" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#first" onclick="showView('projects')">First Project</a>
-                    <a class="dropdown-item" href="#second" onclick="showView('projects')">Second Project</a>
-                    <a class="dropdown-item" href="#third" onclick="showView('projects')">Third Project</a>
+                    <a class="dropdown-item" href="#first" onclick="replaceView('projects')">First Project</a>
+                    <a class="dropdown-item" href="#second" onclick="replaceView('projects')">Second Project</a>
+                    <a class="dropdown-item" href="#third" onclick="replaceView('projects')">Third Project</a>
                 </div>
             </li>
         </ul>
@@ -78,10 +48,10 @@
     </div>
 </header>
 
-<div id="main-content" class="container col-11 rounded-lg" style="background-color: rgba(26, 83, 92, 0.2); box-shadow: 0 10px 25px rgba(26, 83, 92, 0.3); font-size: 13pt">
+<div id="main-content" class="container col-11 rounded-lg">
     <div class="row text-justify">
-        <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 rounded-lg" style="background-color: rgba(26, 83, 92, 0.2);  border-width: 10px !important; color: #154047; padding: 15px">
-            <div id="home" class="container hidden">
+        <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 rounded-lg">
+            <div id="home" class="container">
                 <h2 class="text-center font-weight-bold">Home</h2>
                 <p>
                     Currently, I am studying <strong>Computer Science</strong> in <em>University of Surrey</em> (second year). Before that I was an intern Software Developer at <em>Tehnologica Ltd.</em>, where I gained invaluable experience in the sphere of programming, having participated in several team projects (for <strong>NATO</strong> and <strong>Bulgarian Gov.</strong>).
@@ -92,16 +62,16 @@
                 <p>
                     On the other hand, my other main interest is <em>Software Developing</em>. It all started in the 5th grade when I started attending extracurricular activities at my school, where we created simple console applications in C++, in order to develop our algorithmic thinking. I decided I want programming to be my future. Consequently, I learned a lot from these activities, Informatics classes at school (6+ hour/week), in <em>University of Surrey</em>, work and mostly from information online (primarily from <em>SoftUni</em>, <em>Telerik Academy</em>, <em>YouTube</em> etc.). Now I have deep understanding in the science:
                 </p>
-                <ul>
-                    <li><em>.NET (Frameworks and Core): C#, EF, ASP.NET, WPF</em></li>
-                    <li><em>C/C++</em></li>
-                    <li><em>Java, MySQL, Swing</em></li>
-                    <li><em>SQL Server, T-SQL</em></li>
-                    <li><em>HTML/CSS, JavaScript, Bootstrap</em></li>
-                    <li><em>JSON, XML</em></li>
-                    <li><em>OOP, High-Quality Code, UML, Asynchronous code and Multi-threading, Data Structures and Algoriths</em></li>
-                    <li><em>Arduino Uno (C/AVR Assembly)</em></li>
-                    <li><em>Android: Activities, Layouts, SQL-Lite, Multi-threading</em></li>
+                <ul class="font-italic">
+                    <li>.NET (Frameworks and Core): C#, EF, ASP.NET, WPF</li>
+                    <li>C/C++</li>
+                    <li>Java, MySQL, Swing</li>
+                    <li>SQL Server, T-SQL</li>
+                    <li>HTML/CSS, JavaScript, Bootstrap</li>
+                    <li>JSON, XML</li>
+                    <li>OOP, High-Quality Code, UML, Asynchronous code and Multi-threading, Data Structures and Algoriths</li>
+                    <li>Arduino Uno (C/AVR Assembly)</li>
+                    <li>Android: Activities, Layouts, SQL-Lite, Multi-threading</li>
                 </ul>
                 <p>I have participated in several projects in a team and myself. What I want is to heap more <em>knowledge and experience</em>.</p>
             </div>
@@ -150,18 +120,18 @@
                 <p>
                     1st Semester: (91%)
                 </p>
-                <ul>
-                    <li><em>Programming Fundamentals (94%): the basis of software developing; object-oriented programming; Java; Unit testing with JUnit</em></li>
-                    <li><em>Web and Database Systems (88%): Computer Networking: Web, URL, relative and absolute paths, HTTP requests, Cookies, Web Security, HTML, CSS, PHP, JavaScript (jQuery), data objects transmission formats - XML and JSON, Databases - MySQL</em></li>
-                    <li><em>Computer Logic (87%): how a computer works at the lowest levels, logic gates, truth tables, combinational circuits, adders, latches and flip-flops, number bases, Arduino: AVR Assembly, C programming language</em></li>
-                    <li><em>Foundations of Computing (93%): Set Theory, Number theory, base functions theory, Logic</em></li>
+                <ul class="font-italic">
+                    <li>Programming Fundamentals (94%): the basis of software developing; object-oriented programming; Java; Unit testing with JUnit<</li>
+                    <li>Web and Database Systems (88%): Computer Networking: Web, URL, relative and absolute paths, HTTP requests, Cookies, Web Security, HTML, CSS, PHP, JavaScript (jQuery), data objects transmission formats - XML and JSON, Databases - MySQL</li>
+                    <li>Computer Logic (87%): how a computer works at the lowest levels, logic gates, truth tables, combinational circuits, adders, latches and flip-flops, number bases, Arduino: AVR Assembly, C programming language</li>
+                    <li>Foundations of Computing (93%): Set Theory, Number theory, base functions theory, Logic</li>
                 </ul>
                 <p>2nd Semester (90%):</p>
-                <ul>
-                    <li><em>Software Engineering (85%): designing - UML, Software Requirements Specification, test planning; implementing and testing (unit testing and requirements testing) desktop software systems (Java, Swing - WindowBuilderPro, JUnit)</em></li>
-                    <li><em>Mobile Computing (79%): operating systems basis - bootloader, terminals, multi-threading, thread pool; Android: adb and fastboot, applications - Layouts, Activities, SQLite and multi-threading (Java was used)</em></li>
-                    <li><em>Data Structures and Algorithms (98%): algorithm analysis (Big O, Big Omega, Big Theta, Little o notation), recursion, sorting - Bubble, Insertion, Heap, Quick, Merge, Radix; graph algorithms and complex data structures - stacks and queues, linked lists, Binary trees, heaps</em></li>
-                    <li><em>Foundations of Computing II (99%): Calculus - limits, continuity, derivatives, integration and applications</em></li>
+                <ul class="font-italic">
+                    <li>Software Engineering (85%): designing - UML, Software Requirements Specification, test planning; implementing and testing (unit testing and requirements testing) desktop software systems (Java, Swing - WindowBuilderPro, JUnit)</li>
+                    <li>Mobile Computing (79%): operating systems basis - bootloader, terminals, multi-threading, thread pool; Android: adb and fastboot, applications - Layouts, Activities, SQLite and multi-threading (Java was used)</li>
+                    <li>Data Structures and Algorithms (98%): algorithm analysis (Big O, Big Omega, Big Theta, Little o notation), recursion, sorting - Bubble, Insertion, Heap, Quick, Merge, Radix; graph algorithms and complex data structures - stacks and queues, linked lists, Binary trees, heaps</li>
+                    <li>Foundations of Computing II (99%): Calculus - limits, continuity, derivatives, integration and applications</li>
                 </ul>
 
                 <br />
@@ -183,10 +153,10 @@
                 <p>
                     The scores of my <em>state matriculation exams</em> were as follows:
                 </p>
-                <ul>
-                    <li><em>Physics and Astronomy: Excellent 6.00/6.00</em></li>
-                    <li><em>Mathematics: Excellent 6.00/6.00</em></li>
-                    <li><em>Bulgarian Language and Literature: Excellent 5.64/6.00 (the only grade different from 6.00 in my whole diploma)</em></li>
+                <ul class="font-italic">
+                    <li>Physics and Astronomy: Excellent 6.00/6.00</li>
+                    <li>Mathematics: Excellent 6.00/6.00</li>
+                    <li>Bulgarian Language and Literature: Excellent 5.64/6.00 (the only grade different from 6.00 in my whole diploma)</li>
                 </ul>
             </div>
             <div id="projects" class="container hidden">
@@ -204,9 +174,8 @@
     </div>
 </div>
 
-<br />
 <!-- Footer -->
-<footer class=" pt-4" style="padding-top: 8px; padding-bottom: 8px; background-color: #1A535C !important; color: #f9f9f9; color: rgba(249, 249, 249, 0.65)">
+<footer id="footer" class=" pt-4">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
@@ -259,16 +228,16 @@
                 <h5 class="text-uppercase">Social networks</h5>
 
                 <div class="list-unstyled">
-                    <a href="https://www.linkedin.com/in/milen-georgiev1/" target="_blank" style="padding-right: 10px">
+                    <a href="https://www.linkedin.com/in/milen-georgiev1/" target="_blank">
                         <img class="svg" src="svg/linkedin-in-brands.svg" height="40" alt="LinkedIn.com">
                     </a>
-                    <a href="https://github.com/milenDG" target="_blank" style="padding-right: 10px">
+                    <a href="https://github.com/milenDG" target="_blank">
                         <img class="svg" src="svg/github-brands.svg" height="40" alt="Github.com">
                     </a>
-                    <a href="https://www.facebook.com/milendg1" target="_blank" style="padding-right: 10px">
+                    <a href="https://www.facebook.com/milendg1" target="_blank">
                         <img class="svg" src="svg/facebook-brands.svg" height="40" alt="Facebook.com">
                     </a>
-                    <a href="#" target="_blank" style="padding-right: 10px">
+                    <a href="#" target="_blank">
                         <img class="svg" src="svg/instagram-brands.svg" height="40" alt="Instagram.com">
                     </a>
                 </div>

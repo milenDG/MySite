@@ -1,11 +1,9 @@
-﻿const LARGE_WIDTH = 992;
+﻿let currentView = 'home';
 
 let $views = {};
 let $navs = {};
 
 function init() {
-    fixNavbarPadding();
-
     $views = {
         'home': $('#home'),
         'experience': $('#experience'),
@@ -19,36 +17,14 @@ function init() {
         'education': $('#education-nav'),
         'projects': $('#projects-nav')
     }
-
-    showView('home');
-
-    window.onresize = fixNavbarPadding;
 }
 
-function fixNavbarPadding() {
-    const $header = $('#header'), $main = $('#main-content');
-    if (window.innerWidth >= LARGE_WIDTH) {
-        $header.addClass('fixed-top');
-        $main.css('margin-top', '90px');
-    } else {
-        $header.removeClass('fixed-top');
-        $main.css('margin-top', '25px');
-    }
-}
+function replaceView(id) {
+    $navs[currentView].removeClass('active');
+    $views[currentView].addClass('hidden');
 
-function clearViews() {
-    for (let $view in $views) {
-        if ($views.hasOwnProperty($view)) {
-            $views[$view].detach();
-            $navs[$view].removeClass('active');
-        }
-    }
-}
+    currentView = id;
 
-function showView(id) {
-    clearViews();
-    const $view = $views[id];
     $navs[id].addClass('active');
-    $('#text-content-holder').append($view);
-    $view.show();
+    $views[id].removeClass('hidden');
 }

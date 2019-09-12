@@ -1,0 +1,77 @@
+﻿body {
+    background-color: whitesmoke;
+}
+
+#header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #1A535C !important
+}
+
+#main-content {
+    margin-top: 25px;
+    margin-bottom: 70px;
+    background-color: rgba(26, 83, 92, 0.3);
+    box-shadow: 0 10px 25px rgba(26, 83, 92, 0.3);
+    font-size: 14pt
+}
+
+@media (min-width: 992px) {
+    #main-content {
+        margin-top: 90px;
+    }
+    #header {
+        position:fixed;
+        top:0;
+        right:0;
+        left:0;
+        z-index:1030
+    }
+}
+
+#footer {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgba(26, 83, 92, 0.85) !important;
+    color: #f9f9f9;
+    color: rgba(249, 249, 249, 0.65)
+}
+
+#text-content-holder {
+    background-color: rgba(26, 83, 92, 0.2);
+    border-width: 10px !important;
+    color: #154047;
+    padding: 15px
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+img { 
+    opacity: 1; 
+} 
+img:hover { 
+    opacity: 0.7; 
+}
+
+img.svg {
+    opacity: 1;
+}
+img.svg:hover {
+    opacity: 0.4;
+}
+
+.LI-badge-container-vertical-light {
+    box-shadow: 0 10px 20px rgba(26, 83, 92, 0.4) !important;
+}
+
+.secondary-text {
+    color: rgba(138, 117, 0, 0.75) !important;
+}
+
+a>.svg {
+    margin-right: 10px;
+}
