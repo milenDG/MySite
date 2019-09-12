@@ -4,6 +4,8 @@ let $views = {};
 let $navs = {};
 
 function init() {
+    fixNavbarPadding();
+
     $views = {
         'home': $('#home'),
         'experience': $('#experience'),
@@ -20,15 +22,17 @@ function init() {
 
     showView('home');
 
-    window.onresize = function() {
-        const $header = $('#header'), $main = $('#main-content');
-        if (window.innerWidth >= LARGE_WIDTH) {
-            $header.addClass('fixed-top');
-            $main.css('margin-top', '60px');
-        } else {
-            $header.removeClass('fixed-top');
-            $main.css('margin-top', '0px');
-        }
+    window.onresize = fixNavbarPadding;
+}
+
+function fixNavbarPadding() {
+    const $header = $('#header'), $main = $('#main-content');
+    if (window.innerWidth >= LARGE_WIDTH) {
+        $header.addClass('fixed-top');
+        $main.css('margin-top', '90px');
+    } else {
+        $header.removeClass('fixed-top');
+        $main.css('margin-top', '25px');
     }
 }
 
