@@ -20,11 +20,13 @@ function init() {
 }
 
 function replaceView(id) {
-    $navs[currentView].removeClass('active');
-    $views[currentView].addClass('hidden');
+    if (currentView !== id) {
+        $navs[currentView].removeClass('active');
+        $views[currentView].addClass('hidden');
 
-    currentView = id;
+        currentView = id;
 
-    $navs[id].addClass('active');
-    $views[id].removeClass('hidden');
+        $navs[id].addClass('active');
+        $views[id].removeClass('hidden');
+    }
 }

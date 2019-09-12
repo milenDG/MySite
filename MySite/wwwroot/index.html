@@ -33,11 +33,15 @@
                 <a id="education-nav" class="nav-link" href="#" onclick="replaceView('education')">Education</a>
             </li>
             <li class="nav-item dropdown">
-                <a id="projects-nav" class="nav-link dropdown-toggle" onclick="dropdownClicked()" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <a id="projects-nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#first" onclick="replaceView('projects')">First Project</a>
-                    <a class="dropdown-item" href="#second" onclick="replaceView('projects')">Second Project</a>
-                    <a class="dropdown-item" href="#third" onclick="replaceView('projects')">Third Project</a>
+                    <a class="dropdown-item" href="#nato-bulcod" onclick="replaceView('projects')">NATO BulCod</a>
+                    <a class="dropdown-item" href="#regix" onclick="replaceView('projects')">RegIX (Registry Information eXchange system)</a>
+                    <a class="dropdown-item" href="#multi-touch" onclick="replaceView('projects')">Android Multi-touch Tester</a>
+                    <a class="dropdown-item" href="#morse-coder" onclick="replaceView('projects')">Morse Code Encoder and Decoder</a>
+                    <a class="dropdown-item" href="#football-manager" onclick="replaceView('projects')">Football Competition Manager</a>
+                    <a class="dropdown-item" href="#puzzle-bot" onclick="replaceView('projects')">PuzzleBot</a>
+                    <a class="dropdown-item" href="#chitalishte-saglasie" onclick="replaceView('projects')">Chitalishte 'Saglasie' Village Zhabokrat</a>
                 </div>
             </li>
         </ul>
@@ -52,7 +56,8 @@
     <div class="row text-justify">
         <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 rounded-lg">
             <div id="home" class="container">
-                <h2 class="text-center font-weight-bold">Home</h2>
+                <h2 class="text-center font-weight-bold rounded-lg">Home</h2>
+                <hr />
                 <p>
                     Currently, I am studying <strong>Computer Science</strong> in <em>University of Surrey</em> (second year). Before that I was an intern Software Developer at <em>Tehnologica Ltd.</em>, where I gained invaluable experience in the sphere of programming, having participated in several team projects (for <strong>NATO</strong> and <strong>Bulgarian Gov.</strong>).
                 </p>
@@ -77,7 +82,7 @@
             </div>
             <div id="experience" class="container hidden">
                 <h2 class="text-center font-weight-bold">Experience</h2>
-                <br/>
+                <hr/>
                 <h4 class="font-weight-bold">
                     Technologica Ltd.
                     <br />
@@ -93,8 +98,7 @@
                     At Technologica I met many friendly people, which are still very close friends to me, and found a friendly working environment, encouraging everyone to show the best version of themselves.
                 </p>
 
-                <br/>
-
+                <hr />
                 <h4 class="font-weight-bold">
                     Gamesoft Ltd.
                     <br/>
@@ -109,6 +113,7 @@
             </div>
             <div id="education" class="container hidden">
                 <h2 class="text-center font-weight-bold">Education</h2>
+                <hr />
                 <h4 class="font-weight-bold">
                     University of Surrey
                     <br />
@@ -134,7 +139,7 @@
                     <li>Foundations of Computing II (99%): Calculus - limits, continuity, derivatives, integration and applications</li>
                 </ul>
 
-                <br />
+                <hr />
 
                 <h4 class="font-weight-bold">
                     Sofia High School of Mathematics
@@ -161,9 +166,117 @@
             </div>
             <div id="projects" class="container hidden">
                 <h2 class="text-center font-weight-bold">Projects</h2>
-                <p id="first">First Project</p>
-                <p id="second">Second Project</p>
-                <p id="third">Third Project</p>
+                <hr />
+                <div class="container" id="nato-bulcod">
+                    <h4 class="font-weight-bold">
+                        NATO Data Exchange Redesign for Bulgarian NATO Codification Bureau (BulCod)
+                        <br />
+                        <small class="font-italic text-muted secondary-text">Technologica Ltd. — Jul 2019 – Sep 2019</small>
+                    </h4>
+                    <p>
+                        BulCod was about redesigning the NATO system to work with XML instead of an old format following the encoding of 80-column punch cards initially used in the 1960s. My responsibility was to design and develop the core which was performing the destination validation of the messages, as they should be consistent with the NATO Database and follow some specific rules (defined in ACodP-1 NATO Manual on Codification) for the information they encode. After that the messages are saved into the database, their actions performed in the system and finally XML response message is generated, which is transferred back to the NATO Codification Bureau, that sent the initial message.
+                    </p>
+                    <p class="text-center">
+                        <a href="https://eportal.nspa.nato.int/AC135Public/Support/en/Products/NDER/" target="_blank">
+                            <img src="media/nato.png" height="160" alt="nato-codification.png" />
+                        </a>
+                    </p>
+                </div>
+                <hr />
+                <div class="container" id="regix">
+                    <h4 class="font-weight-bold">
+                        RegIX - Registry Information eXchange system
+                        <br />
+                        <small class="font-italic text-muted secondary-text">Technologica Ltd. — Aug 2019 – Sep 2019</small>
+                    </h4>
+                    <p>
+                        <!-- REGIX -->
+                    </p>
+                    <p class="text-center">
+                        <a href="http://regixaisweb.egov.bg/RegiXInfo/" target="_blank">
+                            <img class="rounded-img shadow" src="media/regix.png" height="80" alt="nato-codification.png" />
+                        </a>
+                    </p>
+                </div>
+                <hr />
+                <div class="container" id="multi-touch">
+                    <h4 class="font-weight-bold">
+                        Android Multi-Touch Tester
+                        <br />
+                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
+                    </h4>
+                    <p>
+                        I created an Android application, written in Java, whose main aim was to test the multi-touch maximum of a display. It was a project in my university. The application's main difficulties were the simultaneous registering of touches and recording them asynchronously to a database. It is also able to display all touches made on the display while testing since the installation of the application.
+                    </p>
+                    <p class="text-center">
+                        <a href="https://github.com/milenDG/MultitouchTester/blob/master/Report.pdf" target="_blank">
+                            <img class="rounded-img shadow-img" src="media/multi-touch-tester.png" height="100" alt="multi-touch-tester.png" />
+                        </a>
+                    </p>
+                </div>
+                <hr />
+                <div class="container" id="morse-coder">
+                    <h4 class="font-weight-bold">
+                        Football Competition Manager
+                        <br />
+                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
+                    </h4>
+                    <p>
+                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.                    </p>
+                    <p class="text-center">
+                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
+                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
+                        </a>
+                    </p>
+                </div>
+                <hr />
+                <div class="container" id="football-manager">
+                    <h4 class="font-weight-bold">
+                        Football Competition Manager
+                        <br />
+                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
+                    </h4>
+                    <p>
+                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.
+                    </p>
+                    <p class="text-center">
+                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
+                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
+                        </a>
+                    </p>
+                </div>
+                <hr />
+                <div class="container" id="puzzle-bot">
+                    <h4 class="font-weight-bold">
+                        Football Competition Manager
+                        <br />
+                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
+                    </h4>
+                    <p>
+                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.
+                    </p>
+                    <p class="text-center">
+                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
+                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
+                        </a>
+                    </p>
+                </div>
+                <hr />
+                <div class="container" id="chitalishte-saglasie">
+                    <h4 class="font-weight-bold">
+                        Football Competition Manager
+                        <br />
+                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
+                    </h4>
+                    <p>
+                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.
+                    </p>
+                    <p class="text-center">
+                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
+                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-5 text-center" style="padding-top:20px; padding-bottom: 20px;">
@@ -249,7 +362,7 @@
 
     </div>
     <!-- Footer Links -->
-
+    <hr style="margin: 10px !important"/>
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
         The site is published on my Github account in repository
