@@ -1,0 +1,90 @@
+[
+  {
+    "id": "nato-bulcod",
+    "heading": "NATO Data Exchange Redesign for Bulgarian NATO Codification Bureau (BulCod)",
+    "secondaryHeading": "Technologica Ltd. &mdash; Jul 2019 &ndash; Sep 2019",
+    "description": "<p>BulCod was about redesigning the NATO system to work with XML instead of an old format following the encoding of 80-column punch cards initially used in the 1960s. My responsibility was to design and develop the core which was performing the destination validation of the messages, as they should be consistent with the NATO Database and follow some specific rules (defined in ACodP-1 NATO Manual on Codification) for the information they encode. After that the messages are saved into the database, their actions performed in the system and finally XML response message is generated, which is transferred back to the NATO Codification Bureau, that sent the initial message.</p>",
+    "picture": {
+      "width": 100,
+      "source": "media/nato.png",
+      "link": "https://eportal.nspa.nato.int/AC135Public/Support/en/Products/NDER/",
+      "alternative": "nato-codification.png",
+      "isRounded": false
+    }
+  },
+  {
+    "id": "regix",
+    "heading": "RegIX - Registry Information eXchange system",
+    "secondaryHeading": "Technologica Ltd. &mdash; Aug 2019 &ndash; Sep 2019",
+    "description": "<p><!-- REGIX --></p>",
+    "picture": {
+      "width": 100,
+      "source": "media/regix.png",
+      "link": "http://regixaisweb.egov.bg/RegiXInfo/",
+      "alternative": "regix.png",
+      "isRounded": true
+    }
+  },
+  {
+    "id": "multi-touch",
+    "heading": "Android Multi-Touch Tester",
+    "secondaryHeading": "University of Surrey &mdash; May 2019",
+    "description": "<p>I created an Android application, written in Java, whose main aim was to test the multi-touch maximum of a display. It was a project in my university. The application's main difficulties were the simultaneous registering of touches and recording them asynchronously to a database. It is also able to display all touches made on the display while testing since the installation of the application.</p>",
+    "picture": {
+      "width": 100,
+      "source": "media/multi-touch-tester.png",
+      "link": "https://github.com/milenDG/MultitouchTester/blob/master/Report.pdf",
+      "alternative": "multi-touch-tester.png",
+      "isRounded": true
+    }
+  },
+  {
+    "id": "football-manager",
+    "heading": "Football Competition Manager",
+    "secondaryHeading": "University of Surrey &mdash; May 2019",
+    "description": "<p>As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.</p>",
+    "picture": {
+      "width": 100,
+      "source": "media/football.png",
+      "link": "https://github.com/milenDG/Football-Competition-Manager",
+      "alternative": "football.png",
+      "isRounded": false
+    }
+  },
+  {
+    "heading": "",
+    "secondaryHeading": "",
+    "description": "",
+    "picture": {
+      "width": 100,
+      "source": "",
+      "link": "",
+      "alternative": "",
+      "isRounded": false
+    }
+  },
+  {
+    "heading": "",
+    "secondaryHeading": "",
+    "description": "",
+    "picture": {
+      "width": 100,
+      "source": "",
+      "link": "",
+      "alternative": "",
+      "isRounded": false
+    }
+  },
+  {
+    "heading": "",
+    "secondaryHeading": "",
+    "description": "",
+    "picture": {
+      "width": 100,
+      "source": "",
+      "link": "",
+      "alternative": "",
+      "isRounded": false
+    }
+  }
+]

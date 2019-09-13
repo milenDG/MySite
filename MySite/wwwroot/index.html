@@ -11,12 +11,12 @@
     <script src="js/linkedIn.js"></script>
     <link rel="stylesheet" href="css/customCss.css" />
 </head>
-<body onload="init()">
+<body>
 <header id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" onclick="replaceView('home')">
+    <a href="#" onclick="replaceView('about')">
         <img src="/media/logo2.png" class="rounded float-left mr-0 mr-md-2" alt="logo.png" height="50" width="50">
     </a>
-    <a class="navbar-brand font-weight-bold font-italic text-light" href="#" onclick="replaceView('home')"  style="margin-bottom: 2px; margin-left: 10px;">Milen Georgiev</a>
+    <a class="navbar-brand font-weight-bold font-italic text-light" href="#" onclick="replaceView('about')"  style="margin-bottom: 2px; margin-left: 10px;">Milen Georgiev</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a id="home-nav" class="nav-link" href="#" onclick="replaceView('home')">Home</a>
+                <a id="about-nav" class="nav-link" href="#" onclick="replaceView('about')">About me</a>
             </li>
             <li class="nav-item">
                 <a id="experience-nav" class="nav-link" href="#" onclick="replaceView('experience')">Experience</a>
@@ -55,228 +55,21 @@
 <div id="main-content" class="container col-11 rounded-lg">
     <div class="row text-justify">
         <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 rounded-lg">
-            <div id="home" class="container">
-                <h2 class="text-center font-weight-bold rounded-lg">Home</h2>
+            <div id="about" class="container">
+                <h2 class="text-center font-weight-bold rounded-lg">About me</h2>
                 <hr />
-                <p>
-                    Currently, I am studying <strong>Computer Science</strong> in <em>University of Surrey</em> (second year). Before that I was an intern Software Developer at <em>Tehnologica Ltd.</em>, where I gained invaluable experience in the sphere of programming, having participated in several team projects (for <strong>NATO</strong> and <strong>Bulgarian Gov.</strong>).
-                </p>
-                <p>
-                    As far as my interests are concerned, <em>Mathematics</em> has always been my favourite science, because I reckon that it is in the base of everything – not only in algorithms, data-structures, modelling and simulations, but also it is an irreplaceable part even in our everyday lives. Therefore, I consider that being a capable software engineer is not possible without a great deal of mathematical knowledge. Moreover, as I had a conditional offer from <strong>University of Cambridge</strong> to study Mathematics (after 2 interviews and 2 tests there) and always try to expand my mathematical capabilities, I believe that I will have the opportunity to bloom in the sphere of <em>Computer Science</em>.
-                </p>
-                <p>
-                    On the other hand, my other main interest is <em>Software Developing</em>. It all started in the 5th grade when I started attending extracurricular activities at my school, where we created simple console applications in C++, in order to develop our algorithmic thinking. I decided I want programming to be my future. Consequently, I learned a lot from these activities, Informatics classes at school (6+ hour/week), in <em>University of Surrey</em>, work and mostly from information online (primarily from <em>SoftUni</em>, <em>Telerik Academy</em>, <em>YouTube</em> etc.). Now I have deep understanding in the science:
-                </p>
-                <ul class="font-italic">
-                    <li>.NET (Frameworks and Core): C#, EF, ASP.NET, WPF</li>
-                    <li>C/C++</li>
-                    <li>Java, MySQL, Swing</li>
-                    <li>SQL Server, T-SQL</li>
-                    <li>HTML/CSS, JavaScript, Bootstrap</li>
-                    <li>JSON, XML</li>
-                    <li>OOP, High-Quality Code, UML, Asynchronous code and Multi-threading, Data Structures and Algoriths</li>
-                    <li>Arduino Uno (C/AVR Assembly)</li>
-                    <li>Android: Activities, Layouts, SQL-Lite, Multi-threading</li>
-                </ul>
-                <p>I have participated in several projects in a team and myself. What I want is to heap more <em>knowledge and experience</em>.</p>
             </div>
             <div id="experience" class="container hidden">
                 <h2 class="text-center font-weight-bold">Experience</h2>
                 <hr/>
-                <h4 class="font-weight-bold">
-                    Technologica Ltd.
-                    <br />
-                    <small class="font-italic text-muted secondary-text">Software Engineer Intern — Jul 2019 - Sep 2019</small>
-                </h4>
-                <p>
-                    While working at Technologica Ltd. I was part of the .NET department of the company and worked as Software Engineer Intern. I had the opportunity to be part of the team developing the military data exchange system of the Bulgarian National Codification Bureau for NATO. My responsibility in the team was to create the core of the system, which was validating, processing, saving the messages and responding to them. The project is written using .NET (C# for the business logic, ASP.NET Core MVC for the Beck-end, Oracle for the database, Entity Framework for the connection with the database). My main accomplishments were in the business logic and working with the database.
-                </p>
-                <p>
-                    I was also part of the team redesigning and rewriting RegIX (Registry Information eXchange system) – a web information system for data exchange between government institution in Bulgaria. My responsibilities were in the Back-end – controllers, services and repositories for the REST services used for exchanging data.
-                </p>
-                <p>
-                    At Technologica I met many friendly people, which are still very close friends to me, and found a friendly working environment, encouraging everyone to show the best version of themselves.
-                </p>
-
-                <hr />
-                <h4 class="font-weight-bold">
-                    Gamesoft Ltd.
-                    <br/>
-                    <small class="font-italic text-muted secondary-text">Junior Software Engineer — Oct 2017 - Sep 2018</small>
-                </h4>
-                <p>
-                    I was working in Gamesoft Ltd. as a software engineer in order to broaden my horizons in the sphere of computer science. I gained a great deal of knowledge about the principles of Object-oriented programming and enhanced my skills as writing high-quality programming code was an essential part of my job. Moreover, I had to use unit testing almost for each fragment of code I used to wrote as it was absolutely essential if the code was to be changed in the future and used by other software engineers.                </p>
-                <p>
-                    While working there my main assignment was to write classes (or functions) by previously established requirements and functionalities. For that I used primarily C#, Java or C++, whichever was needed for the specific project. This thought me how to be more flexible and adapt to what is needed by me. I also had to alter and improve websites when needed using JavaScript and HTML/CSS.                </p>
-                <p>
-                    Working with databases was also part of my responsibilities while I was working in Gamesoft Ltd. I used to write queries for procedures, views, transactions and functions for the databases of our clients. When using databases in applications I used Entity Frameworks in .NET Frameworks or .NET Core. Furthermore, .NET turned out to be my most preferable programming technology for creating software.                </p>
             </div>
             <div id="education" class="container hidden">
                 <h2 class="text-center font-weight-bold">Education</h2>
                 <hr />
-                <h4 class="font-weight-bold">
-                    University of Surrey
-                    <br />
-                    <small class="font-italic text-muted secondary-text">BSc (Hons) with Year in Industry — Oct 2018 - 2022</small>
-                </h4>
-                <p>
-                    I am studying <strong>BSc (Hons) Computer Science</strong> <em>second year (sandwich course)</em> in <strong>University of Surrey</strong> where I am improving and affirming my knowledge in <em>Software Engineering</em>. The third year of my course is <em>industrial placement</em>.
-                </p>
-                <p>
-                    1st Semester: (91%)
-                </p>
-                <ul class="font-italic">
-                    <li>Programming Fundamentals (94%): the basis of software developing; object-oriented programming; Java; Unit testing with JUnit<</li>
-                    <li>Web and Database Systems (88%): Computer Networking: Web, URL, relative and absolute paths, HTTP requests, Cookies, Web Security, HTML, CSS, PHP, JavaScript (jQuery), data objects transmission formats - XML and JSON, Databases - MySQL</li>
-                    <li>Computer Logic (87%): how a computer works at the lowest levels, logic gates, truth tables, combinational circuits, adders, latches and flip-flops, number bases, Arduino: AVR Assembly, C programming language</li>
-                    <li>Foundations of Computing (93%): Set Theory, Number theory, base functions theory, Logic</li>
-                </ul>
-                <p>2nd Semester (90%):</p>
-                <ul class="font-italic">
-                    <li>Software Engineering (85%): designing - UML, Software Requirements Specification, test planning; implementing and testing (unit testing and requirements testing) desktop software systems (Java, Swing - WindowBuilderPro, JUnit)</li>
-                    <li>Mobile Computing (79%): operating systems basis - bootloader, terminals, multi-threading, thread pool; Android: adb and fastboot, applications - Layouts, Activities, SQLite and multi-threading (Java was used)</li>
-                    <li>Data Structures and Algorithms (98%): algorithm analysis (Big O, Big Omega, Big Theta, Little o notation), recursion, sorting - Bubble, Insertion, Heap, Quick, Merge, Radix; graph algorithms and complex data structures - stacks and queues, linked lists, Binary trees, heaps</li>
-                    <li>Foundations of Computing II (99%): Calculus - limits, continuity, derivatives, integration and applications</li>
-                </ul>
-
-                <hr />
-
-                <h4 class="font-weight-bold">
-                    Sofia High School of Mathematics
-                    <br />
-                    <small class="font-italic text-muted secondary-text">High School Education — 2010 - 2018</small>
-                </h4>
-                <p>
-                    I studied in Sofia High School of Mathematics (SHSM) from 2010 to 2018. It is considered to be the best secondary school in Bulgaria, especially for <strong>Mathematics and Computer Science</strong>, and is the hardest one to get admitted to. The students of SHSM are globally known for their achievements not only for <em>Mathematics and Computer Science</em>, but also for <strong>natural sciences</strong> such as <em>Physics</em>, <em>Chemistry</em>, <em>Astronomy</em> etc.
-                </p>
-                <p>
-                    My high school was the place I found my passion for creating software as there I started attending <strong>extracurricular classes for programming</strong> in the 6th grade. In these classes we used to construct simple console applications in <storng>C++</storng> in order to develop our <em>algorithmic thinking</em>. Eventually, we had 6+ hours a week <strong>Programming classes</strong>, in which we studied the basis of <em>object-oriented programming</em> and <em>high-quality code</em>.
-                </p>
-                <p>
-                    At Sofia High School of Mathematics I obtained a Diploma za Zavarsheno Sredno Obrazovanie with an <strong>Overall Score: Excellent 5.96/6.00</strong>
-                </p>
-                <p>
-                    The scores of my <em>state matriculation exams</em> were as follows:
-                </p>
-                <ul class="font-italic">
-                    <li>Physics and Astronomy: Excellent 6.00/6.00</li>
-                    <li>Mathematics: Excellent 6.00/6.00</li>
-                    <li>Bulgarian Language and Literature: Excellent 5.64/6.00 (the only grade different from 6.00 in my whole diploma)</li>
-                </ul>
             </div>
             <div id="projects" class="container hidden">
                 <h2 class="text-center font-weight-bold">Projects</h2>
                 <hr />
-                <div class="container" id="nato-bulcod">
-                    <h4 class="font-weight-bold">
-                        NATO Data Exchange Redesign for Bulgarian NATO Codification Bureau (BulCod)
-                        <br />
-                        <small class="font-italic text-muted secondary-text">Technologica Ltd. — Jul 2019 – Sep 2019</small>
-                    </h4>
-                    <p>
-                        BulCod was about redesigning the NATO system to work with XML instead of an old format following the encoding of 80-column punch cards initially used in the 1960s. My responsibility was to design and develop the core which was performing the destination validation of the messages, as they should be consistent with the NATO Database and follow some specific rules (defined in ACodP-1 NATO Manual on Codification) for the information they encode. After that the messages are saved into the database, their actions performed in the system and finally XML response message is generated, which is transferred back to the NATO Codification Bureau, that sent the initial message.
-                    </p>
-                    <p class="text-center">
-                        <a href="https://eportal.nspa.nato.int/AC135Public/Support/en/Products/NDER/" target="_blank">
-                            <img src="media/nato.png" height="160" alt="nato-codification.png" />
-                        </a>
-                    </p>
-                </div>
-                <hr />
-                <div class="container" id="regix">
-                    <h4 class="font-weight-bold">
-                        RegIX - Registry Information eXchange system
-                        <br />
-                        <small class="font-italic text-muted secondary-text">Technologica Ltd. — Aug 2019 – Sep 2019</small>
-                    </h4>
-                    <p>
-                        <!-- REGIX -->
-                    </p>
-                    <p class="text-center">
-                        <a href="http://regixaisweb.egov.bg/RegiXInfo/" target="_blank">
-                            <img class="rounded-img shadow" src="media/regix.png" height="80" alt="nato-codification.png" />
-                        </a>
-                    </p>
-                </div>
-                <hr />
-                <div class="container" id="multi-touch">
-                    <h4 class="font-weight-bold">
-                        Android Multi-Touch Tester
-                        <br />
-                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
-                    </h4>
-                    <p>
-                        I created an Android application, written in Java, whose main aim was to test the multi-touch maximum of a display. It was a project in my university. The application's main difficulties were the simultaneous registering of touches and recording them asynchronously to a database. It is also able to display all touches made on the display while testing since the installation of the application.
-                    </p>
-                    <p class="text-center">
-                        <a href="https://github.com/milenDG/MultitouchTester/blob/master/Report.pdf" target="_blank">
-                            <img class="rounded-img shadow-img" src="media/multi-touch-tester.png" height="100" alt="multi-touch-tester.png" />
-                        </a>
-                    </p>
-                </div>
-                <hr />
-                <div class="container" id="morse-coder">
-                    <h4 class="font-weight-bold">
-                        Football Competition Manager
-                        <br />
-                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
-                    </h4>
-                    <p>
-                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.                    </p>
-                    <p class="text-center">
-                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
-                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
-                        </a>
-                    </p>
-                </div>
-                <hr />
-                <div class="container" id="football-manager">
-                    <h4 class="font-weight-bold">
-                        Football Competition Manager
-                        <br />
-                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
-                    </h4>
-                    <p>
-                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.
-                    </p>
-                    <p class="text-center">
-                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
-                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
-                        </a>
-                    </p>
-                </div>
-                <hr />
-                <div class="container" id="puzzle-bot">
-                    <h4 class="font-weight-bold">
-                        Football Competition Manager
-                        <br />
-                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
-                    </h4>
-                    <p>
-                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.
-                    </p>
-                    <p class="text-center">
-                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
-                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
-                        </a>
-                    </p>
-                </div>
-                <hr />
-                <div class="container" id="chitalishte-saglasie">
-                    <h4 class="font-weight-bold">
-                        Football Competition Manager
-                        <br />
-                        <small class="font-italic text-muted secondary-text">University of Surrey — May 2019</small>
-                    </h4>
-                    <p>
-                        As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.
-                    </p>
-                    <p class="text-center">
-                        <a href="https://github.com/milenDG/Football-Competition-Manager" target="_blank">
-                            <img class="rounded-img" src="media/football.png" height="100" alt="football.png" />
-                        </a>
-                    </p>
-                </div>
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-5 text-center" style="padding-top:20px; padding-bottom: 20px;">
