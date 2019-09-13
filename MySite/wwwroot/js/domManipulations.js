@@ -75,7 +75,7 @@ function createDataContainer(project) {
     $img.attr('src', project.picture.source);
     $img.attr('alt', project.picture.alternative);
     $img.addClass('rounded-img');
-    if (project.picture.isRounded) {
+    if (!project.picture.isRounded) {
         $img.addClass('shadow-img');
     }
 
