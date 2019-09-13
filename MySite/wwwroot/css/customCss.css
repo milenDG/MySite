@@ -95,11 +95,6 @@ h2 {
     box-shadow: 0 10px 16px rgba(26, 83, 92, 0.4);
 }
 
-h4 {
-    padding-top: 80px !important;
-    margin-top: -80px !important;
-}
-
 .footer-text-link {
     color: #c2a60d;
 }

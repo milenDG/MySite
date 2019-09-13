@@ -48,7 +48,7 @@ function createDataContainer(project) {
     $projectContainer.attr('id', project.id);
 
     //Create container.
-    const $div = $('<div class="col-xl-10 col-lg-9 col-md-8 col-sm-9">');
+    const $div = $('<div class="col-xl-9 col-lg-8 col-md-7 col-sm-8">');
 
     //Create h4.
     const $h4 = $('<h4 class="font-weight-bold">');
@@ -60,11 +60,9 @@ function createDataContainer(project) {
     $h4.append($small);
     $div.append($h4);
 
-    //Create description.
-    $div.append(project.description);
     $projectContainer.append($div);
 
-    const $linkPictureContainer = $('<div class="col-xl-2 col-lg-3 col-md-4 col-sm-3">');
+    const $linkPictureContainer = $('<div class="col-xl-3 col-lg-4 col-md-5 col-sm-4">');
     //Create link picture.
     const $linkPicture = $('<p class="text-right">');
     const $a = $('<a target="_blank">');
@@ -74,9 +72,9 @@ function createDataContainer(project) {
     $img.attr('width', project.picture.width);
     $img.attr('src', project.picture.source);
     $img.attr('alt', project.picture.alternative);
-    $img.addClass('rounded-img');
     if (!project.picture.isRounded) {
         $img.addClass('shadow-img');
+        $img.addClass('rounded-img');
     }
 
     $a.append($img);
@@ -84,6 +82,9 @@ function createDataContainer(project) {
     $linkPictureContainer.append($linkPicture);
 
     $projectContainer.append($linkPictureContainer);
+
+    //Create description.
+    $projectContainer.append($('<div class="container">').append(project.description));
 
     return $projectContainer;
 }
