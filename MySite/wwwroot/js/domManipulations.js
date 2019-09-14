@@ -46,13 +46,16 @@ function replaceView(id) {
 function createDataContainer(project) {
     const $projectContainer = $('<div class="row" >');
     $projectContainer.attr('id', project.id);
+    if (project.class) {
+        $projectContainer.addClass(project.class);
+    }
 
     //Create container.
     const $div = $('<div class="col-xl-9 col-lg-8 col-md-7 col-sm-8">');
 
     //Create h4.
     const $h4 = $('<h4 class="font-weight-bold">');
-    $h4.text(project.heading);
+    $h4.html(project.heading);
     $h4.append($('<br />'));
 
     const $small = $('<small class="font-italic text-muted secondary-text">');
