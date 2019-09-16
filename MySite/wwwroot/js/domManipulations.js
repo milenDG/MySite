@@ -143,7 +143,6 @@ function search(string) {
                 if (index !== -1) {
                     wasMatchFound = true;
 
-                    console.log(viewId);
                     const $a = $(`<a href="#" onClick="replaceView('${viewId}')">`);
                     $a.text($view.text().substr(index - 20, string.length + 40));
 
