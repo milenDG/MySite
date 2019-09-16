@@ -154,9 +154,9 @@ function search(string) {
                     const $a = $(`<a href="#" onClick="replaceView('${viewId}')">`);
                     const viewText = $view.text();
                     const text = viewText.substr(index - 25, 25) +
-                        '<strong><u>' +
+                        '<strong><u><mark>' +
                         viewText.substr(index, toSearch.length) +
-                        '</u></strong>' +
+                        '</mark></u></strong>' +
                         viewText.substr(index + toSearch.length, 25);
 
 

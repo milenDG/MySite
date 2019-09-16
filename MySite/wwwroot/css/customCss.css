@@ -11,8 +11,8 @@
 #main-content {
     margin-top: 25px;
     margin-bottom: 50px;
-    background-color: rgba(26, 83, 92, 0.3);
-    box-shadow: 0 10px 25px rgba(26, 83, 92, 0.3);
+    background-color: #B3C4C7;
+    box-shadow: 0 10px 25px #B3C4C7;
     font-size: 14pt
 }
 
@@ -43,13 +43,12 @@
 #footer {
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: rgba(26, 83, 92, 0.85) !important;
-    color: #f9f9f9;
-    color: rgba(249, 249, 249, 0.65)
+    background-color: #3B6C73 !important;
+    color: #B7C8CA
 }
 
 #text-content-holder {
-    background-color: rgba(26, 83, 92, 0.2);
+    background-color: #94AEB1;
     border-width: 10px !important;
     color: #154047;
     padding: 15px
@@ -78,7 +77,7 @@ img.svg:hover {
 }
 
 .LI-badge-container-vertical-light {
-    box-shadow: 0 10px 20px rgba(26, 83, 92, 0.4) !important;
+    box-shadow: 0 10px 20px #94AEB1 !important;
 }
 
 .secondary-text {
@@ -90,7 +89,7 @@ a>.svg {
 }
 
 h2 {
-    background-color: rgba(245, 245, 245, 0.30);
+    background-color: #B3C4C7;
     padding: 10px;
     margin-top: 5px;
 }
@@ -100,7 +99,7 @@ h2 {
 }
 
 .shadow-img {
-    box-shadow: 0 10px 16px rgba(26, 83, 92, 0.4);
+    box-shadow: 0 10px 16px #94AEB1;
 }
 
 .footer-text-link {
