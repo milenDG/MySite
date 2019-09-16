@@ -2,6 +2,12 @@
 
 let $views = {};
 let $navs = {};
+let idToHeading = {
+    'about': 'About me',
+    'experience': 'Experience',
+    'education': 'Education',
+    'projects': 'Projects'
+};
 
 $(document).ready(() => {
     setViewsAndNavs();
@@ -13,7 +19,8 @@ function setViewsAndNavs() {
         'about': $('#about'),
         'experience': $('#experience'),
         'education': $('#education'),
-        'projects': $('#projects')
+        'projects': $('#projects'),
+        'search': $('#search')
     };
 
     $navs = {
@@ -33,12 +40,12 @@ function appendAllData() {
 
 function replaceView(id) {
     if (currentView !== id) {
-        $navs[currentView].removeClass('active');
+        if($navs[currentView]) $navs[currentView].removeClass('active');
         $views[currentView].addClass('hidden');
 
         currentView = id;
 
-        $navs[id].addClass('active');
+        if($navs[id]) $navs[id].addClass('active');
         $views[id].removeClass('hidden');
     }
 }
@@ -107,4 +114,51 @@ function appendSingleData(array, $container) {
             }
         }
     }
+}
+
+function search(string) {
+    if (!string) {
+        return;
+    }
+
+    $('#search div').html('');
+    string = string.toLowerCase();
+    const $searchView = $views['search'];
+
+    for (const viewId in $views) {
+        if ($views.hasOwnProperty(viewId)) {
+            if(viewId === 'search') continue;
+
+            const $view = $views[viewId];
+            let index = -string.length;
+            let wasMatchFound = false;
+            const $div = $(`<div class="container">
+                <h4 class="font-weight-bold">${idToHeading[viewId]}</h4>
+            </div>`);
+            const $ul = $('<ul>');
+            $div.append($ul);
+
+            do {
+                index = $view.text().toLowerCase().indexOf(string, index + string.length);
+                if (index !== -1) {
+                    wasMatchFound = true;
+
+                    console.log(viewId);
+                    const $a = $(`<a href="#" onClick="replaceView('${viewId}')">`);
+                    $a.text($view.text().substr(index - 20, string.length + 40));
+
+                    const $li = $('<li>');
+                    $li.append($a);
+
+                    $ul.append($li);
+                }
+            } while (index !== -1);
+
+            if (wasMatchFound) {
+                $searchView.append($div);
+            }
+        }
+    }
+
+    replaceView('search');
 }
