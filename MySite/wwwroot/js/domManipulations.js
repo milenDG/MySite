@@ -12,9 +12,6 @@ let idToHeading = {
 $(document).ready(() => {
     setViewsAndNavs();
     appendAllData();
-    $('button').each(function (index) {
-        $(this).removeAttr('disabled');
-    });
 });
 
 function setViewsAndNavs() {
