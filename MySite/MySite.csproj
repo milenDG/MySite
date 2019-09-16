@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\index.html" />
+    <Content Include="index.html" />
   </ItemGroup>
 
   <ItemGroup>
