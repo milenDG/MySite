@@ -96,7 +96,7 @@ h2 {
 }
 
 .rounded-img {
-    border-radius: 15px;
+    border-radius: 15px !important;
 }
 
 .shadow-img {
@@ -105,4 +105,13 @@ h2 {
 
 .footer-text-link {
     color: #c2a60d;
+}
+
+.LI-badge-container-vertical-light {
+    border-radius: 15px !important;
+}
+
+.LI-profile-pic-container {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
