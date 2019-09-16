@@ -114,3 +114,10 @@ h2 {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
+mark {
+    padding: 0;
+    border-radius: 3px;
+    background-color: #B3C4C7;
+    color: inherit;
+}
