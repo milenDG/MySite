@@ -27,7 +27,8 @@ function setViewsAndNavs() {
         'about': $('#about-nav'),
         'experience': $('#experience-nav'),
         'education': $('#education-nav'),
-        'projects': $('#projects-nav')
+        'projects': $('#projects-nav'),
+        'search': $('#search-nav')
     }
 }
 
@@ -40,12 +41,12 @@ function appendAllData() {
 
 function replaceView(id) {
     if (currentView !== id) {
-        if($navs[currentView]) $navs[currentView].removeClass('active');
+        $navs[currentView].removeClass('active');
         $views[currentView].addClass('hidden');
 
         currentView = id;
 
-        if($navs[id]) $navs[id].addClass('active');
+        $navs[id].addClass('active');
         $views[id].removeClass('hidden');
     }
 }
@@ -117,20 +118,26 @@ function appendSingleData(array, $container) {
 }
 
 function search(string) {
+    const $searchView = $views['search'];
+    $('#search div').html('');
+
+    replaceView('search');
+
     if (!string) {
+        $searchView.append($(`<div class="font-italic text-warning">Please enter text for search!</div>`));
         return;
     }
 
-    $('#search div').html('');
-    string = string.toLowerCase();
-    const $searchView = $views['search'];
+    const toSearch = string.toLowerCase();
+
+    let hasMatch = false;
 
     for (const viewId in $views) {
         if ($views.hasOwnProperty(viewId)) {
             if(viewId === 'search') continue;
 
             const $view = $views[viewId];
-            let index = -string.length;
+            let index = -toSearch.length;
             let wasMatchFound = false;
             const $div = $(`<div class="container">
                 <h4 class="font-weight-bold">${idToHeading[viewId]}</h4>
@@ -139,12 +146,21 @@ function search(string) {
             $div.append($ul);
 
             do {
-                index = $view.text().toLowerCase().indexOf(string, index + string.length);
+                index = $view.text().toLowerCase().indexOf(toSearch, index + toSearch.length);
                 if (index !== -1) {
                     wasMatchFound = true;
+                    hasMatch = true;
 
                     const $a = $(`<a href="#" onClick="replaceView('${viewId}')">`);
-                    $a.text($view.text().substr(index - 20, string.length + 40));
+                    const viewText = $view.text();
+                    const text = viewText.substr(index - 25, 25) +
+                        '<strong><u>' +
+                        viewText.substr(index, toSearch.length) +
+                        '</u></strong>' +
+                        viewText.substr(index + toSearch.length, 25);
+
+
+                    $a.html(text);
 
                     const $li = $('<li>');
                     $li.append($a);
@@ -159,5 +175,7 @@ function search(string) {
         }
     }
 
-    replaceView('search');
+    if (!hasMatch) {
+        $searchView.append($(`<div class="font-italic text-warning">No match for "${string}" was found in the text!</div>`));
+    }
 }
