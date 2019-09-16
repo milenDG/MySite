@@ -48,10 +48,10 @@
                 <a id="search-nav" class="nav-link" href="#" onclick="replaceView('search')">Search</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <section class="form-inline my-2 my-lg-0">
             <input id="search-text" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text').val().trim())">
             <button onclick="search($('#search-text').val().trim())" class="btn btn-outline-light my-2 my-sm-0" disabled>Search</button>
-        </form>
+        </section>
     </div>
 </header>
 
@@ -77,10 +77,10 @@
             <div id="search" class="container hidden">
                 <h2 class="text-center font-weight-bold rounded-img">Search Results</h2>
                 <hr />
-                <form class="form-inline mb-2">
+                <section class="form-inline mb-2">
                     <input id="search-text-page" class="form-control mr-sm-2 col" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text-page').val().trim())">
                     <button onclick="search($('#search-text-page').val().trim())" class="btn btn-outline-light  my-2 my-sm-0" disabled>Search</button>
-                </form>
+                </section>
                 <hr />
             </div>
         </div>
