@@ -12,6 +12,7 @@ let idToHeading = {
 $(document).ready(() => {
     setViewsAndNavs();
     appendAllData();
+    $('button').forEach(button => button.removeClass('disabled'));
 });
 
 function setViewsAndNavs() {
