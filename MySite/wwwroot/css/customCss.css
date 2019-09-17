@@ -21,7 +21,7 @@
     margin-top: -20px;
 }
 
-@image (min-width: 992px) {
+@media (min-width: 992px) {
     #main-content {
         margin-top: 90px;
     }
@@ -78,7 +78,7 @@ img.svg:hover {
 }
 
 .secondary-text {
-    color: rgba(138, 117, 0, 0.75) !important;
+    color: #99861d !important;
 }
 
 a>.svg {
@@ -91,16 +91,16 @@ h2 {
     margin-top: 5px;
 }
 
+p {
+    text-align: justify
+}
+
 .rounded-img {
     border-radius: 15px !important;
 }
 
 .shadow-img {
     box-shadow: 5px 10px 16px #41787b;
-}
-
-.footer-text-link {
-    color: #c2a60d;
 }
 
 .LI-badge-container-vertical-light {

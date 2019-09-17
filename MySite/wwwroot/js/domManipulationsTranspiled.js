@@ -57,50 +57,38 @@ function replaceView(id) {
 }
 
 function createDataContainer(project) {
-  var $projectContainer = $('<div class="row" >');
-  $projectContainer.attr('id', project.id);
+  var $dataContainer = $("<div id =\"".concat(project.id, "\" class=\"container clearfix\">"));
 
   if (project.class) {
-    $projectContainer.addClass(project.class);
-  } //Create container.
-
-
-  var $div = $('<div class="col-xl-9 col-lg-8 col-md-7 col-sm-8">'); //Create h4.
+    $dataContainer.addClass(project.class);
+  }
 
   var $h4 = $('<h4 class="font-weight-bold">');
   $h4.html(project.heading);
   $h4.append($('<br />'));
   var $small = $('<small class="font-italic text-muted secondary-text">');
   $small.html(project.secondaryHeading);
-  $h4.append($small);
-  $div.append($h4);
-  $projectContainer.append($div);
+  $dataContainer.append($h4.append($small));
 
   if (project.picture.source) {
-    var $linkPictureContainer = $('<div class="col-xl-3 col-lg-4 col-md-5 col-sm-4">'); //Create link picture.
-
-    var $linkPicture = $('<p class="text-right">');
-    var $a = $('<a target="_blank">');
-    $a.attr('href', project.picture.link);
-    var $img = $('<img>');
-    $img.attr('width', project.picture.width);
-    $img.attr('src', project.picture.source);
-    $img.attr('alt', project.picture.alternative);
+    var $a = $("<a target=\"_blank\" class=\"floating-anchor\" href=\"".concat(project.picture.link, "\">"));
+    var $img = $("<img width=\"".concat(project.picture.width, "\" src=\"").concat(project.picture.source, "\" alt=\"").concat(project.picture.alternative, "\" class=\"clickable-img\">"));
 
     if (!project.picture.isRounded) {
-      $img.addClass('shadow-img');
-      $img.addClass('rounded-img');
+      $img.addClass('shadow-img rounded-img');
     }
 
     $a.append($img);
-    $linkPicture.append($a);
-    $linkPictureContainer.append($linkPicture);
-    $projectContainer.append($linkPictureContainer);
-  } //Create description.
+    $dataContainer.append($a);
+  }
 
+  $dataContainer.append(project.description).append($('<br />'));
 
-  $projectContainer.append($('<div class="container">').append(project.description));
-  return $projectContainer;
+  if (project.class === 'project-link') {
+    $dataContainer.append('<em>Link to the project: </em>').append($("<a class=\"secondary-text\" href=\"".concat(project.picture.link, "\" target=\"_blank\">")).text(project.picture.link));
+  }
+
+  return $dataContainer;
 }
 
 function appendSingleData(array, $container) {
@@ -111,8 +99,8 @@ function appendSingleData(array, $container) {
   for (var index in projects) {
     if (projects.hasOwnProperty(index)) {
       counter++;
-      var $projectContainer = createDataContainer(projects[index]);
-      $container.append($projectContainer);
+      var $dataContainer = createDataContainer(projects[index]);
+      $container.append($dataContainer);
 
       if (counter !== last) {
         $container.append($('<hr />'));

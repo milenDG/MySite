@@ -52,14 +52,11 @@ function replaceView(id) {
 }
 
 function createDataContainer(project) {
-    const $dataContainer = $('<div class="container clearfix">');
-
-    $dataContainer.attr('id', project.id);
+    const $dataContainer = $(`<div id ="${project.id}" class="container clearfix">`);
     if (project.class) {
         $dataContainer.addClass(project.class);
     }
 
-    //Create h4.
     const $h4 = $('<h4 class="font-weight-bold">');
     $h4.html(project.heading);
     $h4.append($('<br />'));
@@ -69,25 +66,24 @@ function createDataContainer(project) {
     $dataContainer.append($h4.append($small));
 
     if (project.picture.source) {
-        const $a = $('<a target="_blank" class="floating-anchor">');
-        $a.attr('href', project.picture.link);
-
-        const $img = $('<img>');
-        $img.attr('width', project.picture.width);
-        $img.attr('src', project.picture.source);
-        $img.attr('alt', project.picture.alternative);
-        $img.addClass('clickable-img');
+        const $a = $(`<a target="_blank" class="floating-anchor" href="${project.picture.link}">`);
+        const $img = $(`<img width="${project.picture.width}" src="${project.picture.source}" alt="${project.picture.alternative}" class="clickable-img">`);
 
         if (!project.picture.isRounded) {
-            $img.addClass('shadow-img');
-            $img.addClass('rounded-img');
+            $img.addClass('shadow-img rounded-img');
         }
 
         $a.append($img);
         $dataContainer.append($a);
     }
 
-    $dataContainer.append(project.description);
+    $dataContainer.append(project.description)
+        .append($('<br />'));
+
+    if (project.class === 'project-link') {
+        $dataContainer.append('<em>Link to the project: </em>')
+            .append($(`<a class="secondary-text" href="${project.picture.link}" target="_blank">`).text(project.picture.link));
+    }
 
     return $dataContainer;
 }
