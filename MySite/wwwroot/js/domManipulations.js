@@ -52,14 +52,12 @@ function replaceView(id) {
 }
 
 function createDataContainer(project) {
-    const $projectContainer = $('<div class="row" >');
-    $projectContainer.attr('id', project.id);
-    if (project.class) {
-        $projectContainer.addClass(project.class);
-    }
+    const $dataContainer = $('<div class="container clearfix">');
 
-    //Create container.
-    const $div = $('<div class="col-xl-9 col-lg-8 col-md-7 col-sm-8">');
+    $dataContainer.attr('id', project.id);
+    if (project.class) {
+        $dataContainer.addClass(project.class);
+    }
 
     //Create h4.
     const $h4 = $('<h4 class="font-weight-bold">');
@@ -68,16 +66,10 @@ function createDataContainer(project) {
 
     const $small = $('<small class="font-italic text-muted secondary-text">');
     $small.html(project.secondaryHeading);
-    $h4.append($small);
-    $div.append($h4);
-
-    $projectContainer.append($div);
+    $dataContainer.append($h4.append($small));
 
     if (project.picture.source) {
-        const $linkPictureContainer = $('<div class="col-xl-3 col-lg-4 col-md-5 col-sm-4">');
-        //Create link picture.
-        const $linkPicture = $('<p class="text-right">');
-        const $a = $('<a target="_blank">');
+        const $a = $('<a target="_blank" style="float:right; padding-top: 5px; padding-left: 20px;">');
         $a.attr('href', project.picture.link);
 
         const $img = $('<img>');
@@ -90,15 +82,12 @@ function createDataContainer(project) {
         }
 
         $a.append($img);
-        $linkPicture.append($a);
-        $linkPictureContainer.append($linkPicture);
-        $projectContainer.append($linkPictureContainer);
+        $dataContainer.append($a);
     }
 
-    //Create description.
-    $projectContainer.append($('<div class="container">').append(project.description));
+    $dataContainer.append(project.description);
 
-    return $projectContainer;
+    return $dataContainer;
 }
 
 function appendSingleData(array, $container) {
@@ -109,8 +98,8 @@ function appendSingleData(array, $container) {
     for (let index in projects) {
         if (projects.hasOwnProperty(index)) {
             counter++;
-            const $projectContainer = createDataContainer(projects[index]);
-            $container.append($projectContainer);
+            const $dataContainer = createDataContainer(projects[index]);
+            $container.append($dataContainer);
             if (counter !== last) {
                 $container.append($('<hr />'));
             }

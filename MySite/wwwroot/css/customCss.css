@@ -55,9 +55,6 @@
 }
 
 
-
-
-
 .hidden {
     display: none;
 }
@@ -99,7 +96,7 @@ h2 {
 }
 
 .shadow-img {
-    box-shadow: 0 10px 16px #94AEB1;
+    box-shadow: 5px 10px 16px #41787b;
 }
 
 .footer-text-link {
@@ -120,4 +117,10 @@ mark {
     border-radius: 3px;
     background-color: #B3C4C7;
     color: inherit;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
