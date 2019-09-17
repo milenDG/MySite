@@ -69,13 +69,15 @@ function createDataContainer(project) {
     $dataContainer.append($h4.append($small));
 
     if (project.picture.source) {
-        const $a = $('<a target="_blank" style="float:right; padding-top: 5px; padding-left: 20px;">');
+        const $a = $('<a target="_blank" class="floating-anchor">');
         $a.attr('href', project.picture.link);
 
         const $img = $('<img>');
         $img.attr('width', project.picture.width);
         $img.attr('src', project.picture.source);
         $img.attr('alt', project.picture.alternative);
+        $img.addClass('clickable-img');
+
         if (!project.picture.isRounded) {
             $img.addClass('shadow-img');
             $img.addClass('rounded-img');

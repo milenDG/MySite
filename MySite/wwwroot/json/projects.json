@@ -7,7 +7,7 @@
     "description": "<p>BulCod was about redesigning the NATO system to work with XML instead of an old format following the encoding of 80-column punch cards initially used in the 1960s. My responsibility was to design and develop the core which was performing the destination validation of the messages, as they should be consistent with the NATO Database and follow some specific rules (defined in ACodP-1 NATO Manual on Codification) for the information they encode. After that the messages are saved into the database, their actions performed in the system and finally XML response message is generated, which is transferred back to the NATO Codification Bureau, that sent the initial message.</p>",
     "picture": {
       "width": 150,
-      "source": "media/nato.png",
+      "source": "image/nato.png",
       "link": "https://eportal.nspa.nato.int/AC135Public/Support/en/Products/NDER/",
       "alternative": "nato-codification.png",
       "isRounded": true
@@ -21,7 +21,7 @@
     "description": "<p><!-- REGIX --></p>",
     "picture": {
       "width": 300,
-      "source": "media/regix.png",
+      "source": "image/regix.png",
       "link": "http://regixaisweb.egov.bg/RegiXInfo/",
       "alternative": "regix.png",
       "isRounded": false
@@ -35,7 +35,7 @@
     "description": "<p>I created an Android application, written in Java, whose main aim was to test the multi-touch maximum of a display. It was a project in my university. The application's main difficulties were the simultaneous registering of touches and recording them asynchronously to a database. It is also able to display all touches made on the display while testing since the installation of the application.</p>",
     "picture": {
       "width": 150,
-      "source": "media/multi-touch-tester.png",
+      "source": "image/multi-touch-tester.png",
       "link": "https://github.com/milenDG/MultitouchTester/blob/master/Report.pdf",
       "alternative": "multi-touch-tester.png",
       "isRounded": false
@@ -63,7 +63,7 @@
     "description": "<p>PuzzleBot is a software program which solves Slither link puzzles. It is written in C++ and the project required a great amount of experience in areas like algorithms, data structures, object recognition and graphical interface. The bot is designed to scan a puzzle opened in the browser, decompose it into several previously defined data structures, use its own algorithmic thinking to solve the puzzle and then complete it directly in the browser by mouse-clicking at the exact coordinates which the bot has previously calculated.</p><p>The project involved working with C#, C++, Desktop Application, Windows Form Applications, Data Structures, OOP , pointers and addressing, Machine Vision and Optical Character Recognition algorithms.</p><p style=\"font-weight-light font-italic\">Other Creators: Dimitar Georgiev, Dimiter Stoykov</p>",
     "picture": {
       "width": 300,
-      "source": "media/puzzle-loop.png",
+      "source": "image/puzzle-loop.png",
       "link": "https://github.com/milenDG/PuzzleLoopSolver",
       "alternative": "puzzle-loop.png",
       "isRounded": true
@@ -77,7 +77,7 @@
     "description": "<p>As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.</p>",
     "picture": {
       "width": 100,
-      "source": "media/football.png",
+      "source": "image/football.png",
       "link": "https://github.com/milenDG/Football-Competition-Manager",
       "alternative": "football.png",
       "isRounded": true
