@@ -73,26 +73,27 @@ function createDataContainer(project) {
 
     $projectContainer.append($div);
 
-    const $linkPictureContainer = $('<div class="col-xl-3 col-lg-4 col-md-5 col-sm-4">');
-    //Create link picture.
-    const $linkPicture = $('<p class="text-right">');
-    const $a = $('<a target="_blank">');
-    $a.attr('href', project.picture.link);
+    if (project.picture.source) {
+        const $linkPictureContainer = $('<div class="col-xl-3 col-lg-4 col-md-5 col-sm-4">');
+        //Create link picture.
+        const $linkPicture = $('<p class="text-right">');
+        const $a = $('<a target="_blank">');
+        $a.attr('href', project.picture.link);
 
-    const $img = $('<img>');
-    $img.attr('width', project.picture.width);
-    $img.attr('src', project.picture.source);
-    $img.attr('alt', project.picture.alternative);
-    if (!project.picture.isRounded) {
-        $img.addClass('shadow-img');
-        $img.addClass('rounded-img');
+        const $img = $('<img>');
+        $img.attr('width', project.picture.width);
+        $img.attr('src', project.picture.source);
+        $img.attr('alt', project.picture.alternative);
+        if (!project.picture.isRounded) {
+            $img.addClass('shadow-img');
+            $img.addClass('rounded-img');
+        }
+
+        $a.append($img);
+        $linkPicture.append($a);
+        $linkPictureContainer.append($linkPicture);
+        $projectContainer.append($linkPictureContainer);
     }
-
-    $a.append($img);
-    $linkPicture.append($a);
-    $linkPictureContainer.append($linkPicture);
-
-    $projectContainer.append($linkPictureContainer);
 
     //Create description.
     $projectContainer.append($('<div class="container">').append(project.description));
@@ -105,7 +106,7 @@ function appendSingleData(array, $container) {
 
     let counter = 0;
     const last = projects.length;
-    for (const index in projects) {
+    for (let index in projects) {
         if (projects.hasOwnProperty(index)) {
             counter++;
             const $projectContainer = createDataContainer(projects[index]);
@@ -124,7 +125,7 @@ function search(string) {
     replaceView('search');
 
     if (!string) {
-        $searchView.append($(`<div class="font-italic text-warning">Please enter text for search!</div>`));
+        $searchView.append($('<div class="font-italic text-warning">Please enter text for search!</div>'));
         return;
     }
 
@@ -132,16 +133,14 @@ function search(string) {
 
     let hasMatch = false;
 
-    for (const viewId in $views) {
+    for (let viewId in $views) {
         if ($views.hasOwnProperty(viewId)) {
             if(viewId === 'search') continue;
 
             const $view = $views[viewId];
             let index = -toSearch.length;
             let wasMatchFound = false;
-            const $div = $(`<div class="container">
-                <h4 class="font-weight-bold">${idToHeading[viewId]}</h4>
-            </div>`);
+            const $div = $(`<div class="container"><h4 class="font-weight-bold">${idToHeading[viewId]}</h4></div>`);
             const $ul = $('<ul>');
             $div.append($ul);
 
@@ -153,12 +152,7 @@ function search(string) {
 
                     const $a = $(`<a href="#" onClick="replaceView('${viewId}')">`);
                     const viewText = $view.text();
-                    const text = viewText.substr(index - 25, 25) +
-                        '<strong><u><mark>' +
-                        viewText.substr(index, toSearch.length) +
-                        '</mark></u></strong>' +
-                        viewText.substr(index + toSearch.length, 25);
-
+                    const text = `${viewText.substr(index - 25, 25)}<strong><u><mark>${viewText.substr(index, toSearch.length)}</mark></u></strong>${viewText.substr(index + toSearch.length, 25)}`;
 
                     $a.html(text);
 
@@ -178,4 +172,8 @@ function search(string) {
     if (!hasMatch) {
         $searchView.append($(`<div class="font-italic text-warning">No match for "${string}" was found in the text!</div>`));
     }
+}
+
+function clearInputField(id) {
+    $(id).val('');
 }

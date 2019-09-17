@@ -1,5 +1,6 @@
 ﻿namespace MySite
 {
+    using System.Collections.Generic;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -19,16 +20,17 @@
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-
-            app.UseMvc();
-
-            app.Run(async (context) =>
+            if (env.IsDevelopment())
             {
-                await context.Response.WriteAsync(File.ReadAllText(@"..\MySite\index.html"));
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseDefaultFiles(new DefaultFilesOptions
+            {
+                DefaultFileNames = new List<string> { "index.html" }
             });
+
+            app.UseStaticFiles();
         }
     }
 }
