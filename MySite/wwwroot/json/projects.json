@@ -18,7 +18,7 @@
     "class": "project-link",
     "heading": "RegIX &ndash; Registry Information eXchange system",
     "secondaryHeading": "Technologica Ltd. &mdash; Aug 2019 &ndash; Sep 2019",
-    "description": "<p><!-- REGIX --></p>",
+    "description": "<p>RegIX is a system for data exchange between Bulgarian Government Institutions. Each day there are thousands of messages sent through the informational system and because of that, the system is important for Bulgaria. It can also be used be citizens to view their personal data. All ministries, agencies, bank, insurance companies etc. use RegIX for obtaining information necessary for them. The system is in the process of redesigning, rewriting and expanding.</p><p>I took part in that project and my work was primarily in creating Controllers, Services and Repositories and mapping data-objects. The purpose of these controllers is for the REST API used for data-exchange.</p>",
     "picture": {
       "width": 300,
       "source": "image/regix.png",
@@ -48,11 +48,11 @@
     "secondaryHeading": "University of Surrey &mdash; Nov 2018",
     "description": "<p>I created a morse code decoder working on an Arduno UNO board. It is written in AVR Assembly and is using a 7-segment display for the output of the letter and a digitl source, from which to decode the morse code (I used a button, timing the presses, but it can be used with other sources). The main difficulties were to implement the timer which was measuring the presses of the button and to store the data of the presses (I used 2 registers => 1 for the lenght of the morse message and 1 for the sequence of dots and dashes).</p><p>The decoder may be used together with a morse code encoder. It translates an array of letters, holding a message, to a digital output representing the morse code of the letter. This digital output has the same encoding as the one the decoder decodes.</p>",
     "picture": {
-      "width": 100,
-      "source": "",
-      "link": "",
-      "alternative": "",
-      "isRounded": false
+      "width": 200,
+      "source": "image/arduino.png",
+      "link": "https://github.com/milenDG?tab=repositories",
+      "alternative": "arduino.png",
+      "isRounded": true
     }
   },
   {
@@ -90,11 +90,11 @@
     "secondaryHeading": "Voluntary Project &mdash; Nov 2017 &ndash; Jan 2018",
     "description": "<p>I created an online site as a voluntary project for an organisation in small village near Kyustendil called Zhabokrat. They use it in order to popularise old Bulgarian culture, which is gradually going extinct in Bulgaria due to urbanisation.</p>",
     "picture": {
-      "width": 100,
-      "source": "",
-      "link": "",
-      "alternative": "",
-      "isRounded": false
+      "width": 150,
+      "source": "svg/chitalishte.svg",
+      "link": "https://chitalishte.wixsite.com/saglasie",
+      "alternative": "svg/chitalishte.svg",
+      "isRounded": true
     }
   }
 ]
