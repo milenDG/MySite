@@ -56,25 +56,25 @@ function replaceView(id) {
   }
 }
 
-function createDataContainer(project) {
-  var $dataContainer = $("<div id =\"".concat(project.id, "\" class=\"container clearfix\">"));
+function createDataContainer(data) {
+  var $dataContainer = $("<div id =\"".concat(data.id, "\" class=\"container clearfix\">"));
 
-  if (project.class) {
-    $dataContainer.addClass(project.class);
+  if (data.class) {
+    $dataContainer.addClass(data.class);
   }
 
   var $h4 = $('<h4 class="font-weight-bold">');
-  $h4.html(project.heading);
+  $h4.html(data.heading);
   $h4.append($('<br />'));
   var $small = $('<small class="font-italic text-muted secondary-text">');
-  $small.html(project.secondaryHeading);
+  $small.html(data.secondaryHeading);
   $dataContainer.append($h4.append($small));
 
-  if (project.picture.source) {
-    var $a = $("<a target=\"_blank\" class=\"floating-anchor\" href=\"".concat(project.picture.link, "\">"));
-    var $img = $("<img width=\"".concat(project.picture.width, "\" src=\"").concat(project.picture.source, "\" alt=\"").concat(project.picture.alternative, "\" class=\"clickable-img\">"));
+  if (data.picture.source) {
+    var $a = $("<a target=\"_blank\" class=\"floating-anchor\" href=\"".concat(data.picture.link, "\" title=\"").concat(data.picture.link, "\">"));
+    var $img = $("<img width=\"".concat(data.picture.width, "\" src=\"").concat(data.picture.source, "\" alt=\"").concat(data.picture.alternative, "\" class=\"clickable-img\">"));
 
-    if (!project.picture.isRounded) {
+    if (!data.picture.isRounded) {
       $img.addClass('shadow-img rounded-img');
     }
 
@@ -82,10 +82,10 @@ function createDataContainer(project) {
     $dataContainer.append($a);
   }
 
-  $dataContainer.append(project.description).append($('<br />'));
+  $dataContainer.append(data.description).append($('<br />'));
 
-  if (project.class === 'project-link') {
-    $dataContainer.append('<em>Link to the project: </em>').append($("<a class=\"secondary-text\" href=\"".concat(project.picture.link, "\" target=\"_blank\">")).text(project.picture.link));
+  if (data.class === 'project-link') {
+    $dataContainer.append('<em>Link to the project: </em>').append($("<a class=\"secondary-text\" href=\"".concat(data.picture.link, "\" target=\"_blank\">")).text(data.picture.link));
   }
 
   return $dataContainer;
