@@ -164,3 +164,15 @@ function search(string) {
 function clearInputField(id) {
     $(id).val('');
 }
+
+function showProjects() {
+    $('#projects-nav').attr('aria-expanded', 'true');
+    $('#projects-dropdown').addClass('show');
+    $('#projects-dropdown-menu').addClass('show');
+}
+
+function hideProjects() {
+    $('#projects-nav').attr('aria-expanded', 'false');
+    $('#projects-dropdown').removeClass('show');
+    $('#projects-dropdown-menu').removeClass('show');
+}

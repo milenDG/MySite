@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-    <script src="js/domManipulationsTranspiled.js"></script>
+    <script src="js/domManipulations.js"></script>
     <link rel="stylesheet" href="css/customCss.css" />
 </head>
 <body>
@@ -34,9 +34,9 @@
             <li class="nav-item">
                 <a id="education-nav" class="nav-link" href="#" onclick="replaceView('education')">Education</a>
             </li>
-            <li class="nav-item dropdown">
-                <a id="projects-nav" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                <div class="dropdown-menu">
+            <li id="projects-dropdown" onmouseover="showProjects()" class="nav-item dropdown">
+                <a id="projects-nav" onclick="replaceView('projects')" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div id="projects-dropdown-menu" onmouseover="showProjects()" onmouseout="hideProjects()" class="dropdown-menu">
                     <a class="dropdown-item" href="#nato-bulcod" onclick="replaceView('projects')">NATO BulCod</a>
                     <a class="dropdown-item" href="#regix" onclick="replaceView('projects')">RegIX (Registry Information eXchange system)</a>
                     <a class="dropdown-item" href="#multi-touch" onclick="replaceView('projects')">Android Multi-touch Tester</a>
