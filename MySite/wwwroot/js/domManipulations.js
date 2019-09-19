@@ -1,7 +1,7 @@
 ﻿let currentView = 'about';
-
 let $views = {};
 let $navs = {};
+
 let idToHeading = {
     'about': 'About me',
     'experience': 'Experience',
@@ -9,9 +9,18 @@ let idToHeading = {
     'projects': 'Projects'
 };
 
+let htmlInInnerHtml = {
+    'about': [],
+    'experience': [],
+    'education': [],
+    'projects': []
+}
+
 $(document).ready(() => {
     setViewsAndNavs();
-    appendAllData();
+    $.when(appendAllData()).then(() =>
+        findHtmlInInnerHtml());
+    console.dir(htmlInInnerHtml);
 });
 
 function setViewsAndNavs() {
@@ -33,10 +42,12 @@ function setViewsAndNavs() {
 }
 
 function appendAllData() {
-    $.getJSON('/json/about.json', (json) => appendSingleData(json, $('#about')));
-    $.getJSON('/json/experience.json', (json) => appendSingleData(json, $('#experience')));
-    $.getJSON('/json/education.json', (json) => appendSingleData(json, $('#education')));
-    $.getJSON('/json/projects.json', (json) => appendSingleData(json, $('#projects')));
+    return [
+        $.getJSON('/json/about.json', (json) => appendSingleData(json, $('#about'))),
+        $.getJSON('/json/experience.json', (json) => appendSingleData(json, $('#experience'))),
+        $.getJSON('/json/education.json', (json) => appendSingleData(json, $('#education'))),
+        $.getJSON('/json/projects.json', (json) => appendSingleData(json, $('#projects')))
+    ];
 }
 
 function replaceView(id) {
@@ -103,6 +114,7 @@ function appendSingleData(array, $container) {
             }
         }
     }
+    console.dir('done');
 }
 
 function search(string) {
@@ -158,6 +170,39 @@ function search(string) {
 
     if (!hasMatch) {
         $searchView.append($(`<div class="font-italic text-warning">No match for "${string}" was found in the text!</div>`));
+    }
+}
+
+//function highlightTextInView(string, $view) {
+//    if (string.contains('<')) {
+        
+
+//    }
+//    $.innerHTML.replace
+
+//}
+
+function findHtmlInInnerHtml() {
+    for (const viewName in $views) {
+        if ($views.hasOwnProperty(viewName) && viewName !== 'search') {
+            
+            const innerHtml = $views[viewName].html();
+            console.dir(innerHtml);
+            let begin = -1, end;
+
+            for (let i = 0; i<innerHtml.length; i++){
+                if (innerHtml.charAt(i) === '<') {
+                    begin = i;
+                }
+                if (innerHtml.charAt(i) === '>') {
+                    end = i;
+                    htmlInInnerHtml[viewName].push({
+                        'begin': begin,
+                        'end': end
+                    });
+                }
+            }
+        }
     }
 }
 
