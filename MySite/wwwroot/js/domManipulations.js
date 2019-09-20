@@ -1,13 +1,20 @@
 ﻿let currentView = 'about';
-
 let $views = {};
 let $navs = {};
+
 let idToHeading = {
     'about': 'About me',
     'experience': 'Experience',
     'education': 'Education',
     'projects': 'Projects'
 };
+
+let htmlInInnerHtml = {
+    'about': [],
+    'experience': [],
+    'education': [],
+    'projects': []
+}
 
 $(document).ready(() => {
     setViewsAndNavs();
@@ -33,10 +40,26 @@ function setViewsAndNavs() {
 }
 
 function appendAllData() {
-    $.getJSON('/json/about.json', (json) => appendSingleData(json, $('#about')));
-    $.getJSON('/json/experience.json', (json) => appendSingleData(json, $('#experience')));
-    $.getJSON('/json/education.json', (json) => appendSingleData(json, $('#education')));
-    $.getJSON('/json/projects.json', (json) => appendSingleData(json, $('#projects')));
+    $.getJSON('/json/about.json',
+        (json) => {
+            appendSingleData(json, $('#about'));
+            findHtmlInInnerHtml('about');
+        });
+    $.getJSON('/json/experience.json',
+        (json) => {
+            appendSingleData(json, $('#experience'));
+            findHtmlInInnerHtml('experience');
+        });
+    $.getJSON('/json/education.json',
+        (json) => {
+            appendSingleData(json, $('#education'));
+            findHtmlInInnerHtml('education');
+        });
+    $.getJSON('/json/projects.json',
+        (json) => {
+            appendSingleData(json, $('#projects'));
+            findHtmlInInnerHtml('projects');
+        });
 }
 
 function replaceView(id) {
@@ -131,14 +154,16 @@ function search(string) {
             const $ul = $('<ul>');
             $div.append($ul);
 
+            const viewText = $view.text();
+            const viewTextLower = $view.text().toLowerCase();
+
             do {
-                index = $view.text().toLowerCase().indexOf(toSearch, index + toSearch.length);
+                index = viewTextLower.indexOf(toSearch, index + toSearch.length);
                 if (index !== -1) {
                     wasMatchFound = true;
                     hasMatch = true;
 
-                    const $a = $(`<a href="#" onClick="replaceView('${viewId}')">`);
-                    const viewText = $view.text();
+                    const $a = $(`<a href="#" onClick="replaceView('${viewId}'); highlightTextInView('${toSearch}', '${viewId}')">`);
                     const text = `${viewText.substr(index - 25, 25)}<strong><u><mark>${viewText.substr(index, toSearch.length)}</mark></u></strong>${viewText.substr(index + toSearch.length, 25)}`;
 
                     $a.html(text);
@@ -159,10 +184,64 @@ function search(string) {
     if (!hasMatch) {
         $searchView.append($(`<div class="font-italic text-warning">No match for "${string}" was found in the text!</div>`));
     }
+
+    $('#search-text').val(string);
+    $('#search-text-page').val(string);
 }
 
-function clearInputField(id) {
-    $(id).val('');
+function highlightTextInView(toSearch, viewId) {
+    const $view = $(`#${viewId}`);
+
+    
+
+    let index = -toSearch.length - 30;
+    let viewHtml = $view.html();
+    let viewHtmlLower = $view.html().toLowerCase();
+
+    do {
+        index = viewHtmlLower.indexOf(toSearch, index + toSearch.length + 30);
+        if (index !== -1) {
+            let isInHtml = false;
+
+            for (const el of htmlInInnerHtml[viewId]) {
+                if (el[0] <= index && index <= el[1]) {
+                    isInHtml = true;
+                    break;
+                }
+            }
+
+            if (isInHtml) {
+                continue;
+            }
+
+            viewHtml = insertInString(viewHtml, index, 0, '<mark class="searched">');
+            viewHtml = insertInString(viewHtml, index + toSearch.length + 23, 0, '</mark>');
+            $view.html(viewHtml);
+            findHtmlInInnerHtml(viewId);
+        }
+
+        viewHtmlLower = viewHtml.toLowerCase();
+    } while (index !== -1);
+}
+
+function findHtmlInInnerHtml(viewId) {
+    htmlInInnerHtml[viewId] = [];
+    if ($views.hasOwnProperty(viewId) && viewId !== 'search') {
+
+        const innerHtml = $(`#${viewId}`).html();
+        
+        let begin = -1, end;
+
+        for (let i = 0; i<innerHtml.length; i++){
+            if (innerHtml.charAt(i) === '<') {
+                begin = i;
+            }
+            if (innerHtml.charAt(i) === '>') {
+                end = i;
+                htmlInInnerHtml[viewId].push([begin, end]);
+            }
+        }
+    }
 }
 
 function showProjects() {
@@ -175,4 +254,21 @@ function hideProjects() {
     $('#projects-nav').attr('aria-expanded', 'false');
     $('#projects-dropdown').removeClass('show');
     $('#projects-dropdown-menu').removeClass('show');
+}
+
+function insertInString(string, idx, rem, str) {
+    return string.slice(0, idx) + str + string.slice(idx + Math.abs(rem));
+};
+
+function removeHighlight() {
+    for (const viewId in $views) {
+        if ($views.hasOwnProperty(viewId)) {
+            let html = $views[viewId].html();
+            html = html.replace(/<mark class="searched">/g, '');
+            html = html.replace(/<\/mark>/g, '');
+
+            $views[viewId].html(html);
+            findHtmlInInnerHtml(viewId);
+        }
+    }
 }
