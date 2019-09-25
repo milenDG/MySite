@@ -2,8 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="This is the website of Milen Georgiev, a Software Engineer and student at University of Surrey.">
-    <title>Milen Georgiev</title>
+
+    <meta property="og:title" content="Milen Georgiev - Software Engineer">
+    <meta property="og:description" content="Website of Milen Georgiev, a Software Engineer and student at University of Surrey.">
+    <meta property="og:image" content="https://www.milengeorgiev.co.uk/image/me2-cropped.jpg">
+    <meta property="og:url" content="https://www.milengeorgiev.co.uk/">
+    
+    <meta name="twitter:title" content="Milen Georgiev - Software Engineer">
+    <meta name="twitter:description" content="Website of Milen Georgiev, a Software Engineer and student at University of Surrey.">
+    <meta name="twitter:image" content="https://www.milengeorgiev.co.uk/image/me2-cropped.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="fb:app_id" content="952208318449880" />
+
+    <title>Milen Georgiev - Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="image/logo2.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -15,11 +27,29 @@
     <link rel="stylesheet" href="css/customCss.css" />
 </head>
 <body onclick="hideProjects()">
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '952208318449880',
+            xfbml      : true,
+            version    : 'v4.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <header onclick="removeHighlight()" id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a href="#" onclick="replaceView('about')">
         <img src="/image/logo2.png" class="rounded float-left mr-0 mr-md-2 clickable-img" alt="logo.png" height="50" width="50">
     </a>
-    <a class="navbar-brand font-weight-bold font-italic text-light" href="#" onclick="replaceView('about')"  style="margin-bottom: 2px; margin-left: 10px;">Milen Georgiev</a>
+    <a class="navbar-brand font-weight-bold font-italic text-light" href="#" onclick="replaceView('about')" style="margin-bottom: 2px; margin-left: 10px;">Milen Georgiev</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,28 +93,28 @@
         <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 rounded-img">
             <div id="about" class="container">
                 <h2 class="text-center font-weight-bold rounded-img">About me</h2>
-                <hr />
+                <hr/>
             </div>
             <div id="experience" class="container hidden">
                 <h2 class="text-center font-weight-bold rounded-img">Experience</h2>
-                <hr />
+                <hr/>
             </div>
             <div id="education" class="container hidden">
                 <h2 class="text-center font-weight-bold rounded-img">Education</h2>
-                <hr />
+                <hr/>
             </div>
             <div id="projects" class="container hidden">
                 <h2 class="text-center font-weight-bold rounded-img">Projects</h2>
-                <hr />
+                <hr/>
             </div>
             <div id="search" class="container hidden">
                 <h2 class="text-center font-weight-bold rounded-img">Search Results</h2>
-                <hr />
+                <hr/>
                 <section class="form-inline mb-2">
                     <input id="search-text-page" class="form-control mr-sm-2 col" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text-page').val().trim())">
                     <button onclick="search($('#search-text-page').val().trim());" class="btn btn-outline-light  my-2 my-sm-0">Search</button>
                 </section>
-                <hr />
+                <hr/>
             </div>
         </div>
         <div class="col-xl-3 col-lg-4 col-md-5 text-center" style="padding-top: 20px; padding-bottom: 20px">
@@ -149,7 +179,7 @@
     <div class="footer-copyright text-center py-3">
         The site is published on my Github account in repository
         <a class="footer-text-link" href="https://github.com/milenDG/MySite" target="_blank">MySite</a>.
-        <br />© 2019 Copyright:
+        <br/>© 2019 Copyright:
         <a class="footer-text-link" href="https://www.linkedin.com/in/milen-georgiev1/" target="_blank"> Milen Georgiev</a>
     </div>
 </footer>
