@@ -75,7 +75,7 @@ function replaceView(id) {
 }
 
 function createDataContainer(data) {
-    const $dataContainer = $(`<div id ="${data.id}" class="container clearfix">`);
+    const $dataContainer = $(`<div id ="${data.id}" class="container">`);
     if (data.class) {
         $dataContainer.addClass(data.class);
     }
@@ -105,7 +105,8 @@ function createDataContainer(data) {
 
     if (data.class === 'project-link') {
         $dataContainer.append('<em>Link to the project: </em>')
-            .append($(`<a class="secondary-text" href="${data.picture.link}" target="_blank">`).text(data.picture.link));
+            .append($(`<a class="btn link-button font-weight-bold font-italic" href="${data.picture.link}" target="_blank" role="button">`)
+                .text(data['short-heading']));
     }
 
     return $dataContainer;

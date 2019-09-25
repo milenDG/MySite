@@ -3,6 +3,7 @@
     "id": "nato-bulcod",
     "class": "project-link",
     "heading": "NATO Data Exchange Redesign for Bulgarian NATO Codification Bureau (BulCod)",
+    "short-heading": "BulCod",
     "secondaryHeading": "Technologica Ltd. &mdash; Jul 2019 &ndash; Sep 2019",
     "description": "<p>BulCod was about redesigning the NATO system to work with XML instead of an old format following the encoding of 80-column punch cards initially used in the 1960s. My responsibility was to design and develop the core which was performing the destination validation of the messages, as they should be consistent with the NATO Database and follow some specific rules (defined in ACodP-1 NATO Manual on Codification) for the information they encode. After that the messages are saved into the database, their actions performed in the system and finally XML response message is generated, which is transferred back to the NATO Codification Bureau, that sent the initial message.</p>",
     "picture": {
@@ -17,6 +18,7 @@
     "id": "regix",
     "class": "project-link",
     "heading": "RegIX &ndash; Registry Information eXchange system",
+    "short-heading": "RegIX",
     "secondaryHeading": "Technologica Ltd. &mdash; Aug 2019 &ndash; Sep 2019",
     "description": "<p>RegIX is a system for data exchange between Bulgarian Government Institutions. Each day there are thousands of messages sent through the informational system and because of that, the system is important for Bulgaria. It can also be used be citizens to view their personal data. All ministries, agencies, bank, insurance companies etc. use RegIX for obtaining information necessary for them. The system is in the process of redesigning, rewriting and expanding.</p><p>I took part in that project and my work was primarily in creating Controllers, Services and Repositories and mapping data-objects. The purpose of these controllers is for the REST API used for data-exchange.</p>",
     "picture": {
@@ -31,6 +33,7 @@
     "id": "multi-touch",
     "class": "project-link",
     "heading": "Android Multi-Touch Tester",
+    "short-heading": "Multi-touch Tester",
     "secondaryHeading": "University of Surrey &mdash; May 2019",
     "description": "<p>I created an Android application, written in Java, whose main aim was to test the multi-touch maximum of a display. It was a project in my university. The application's main difficulties were the simultaneous registering of touches and recording them asynchronously to a database. It is also able to display all touches made on the display while testing since the installation of the application.</p>",
     "picture": {
@@ -45,6 +48,7 @@
     "id": "morse-code",
     "class": "project-link",
     "heading": "Morse Code Encoder and Decoder",
+    "short-heading": "Morse Code Encoder/Decoder",
     "secondaryHeading": "University of Surrey &mdash; Nov 2018",
     "description": "<p>I created a morse code decoder working on an Arduno UNO board. It is written in AVR Assembly and is using a 7-segment display for the output of the letter and a digitl source, from which to decode the morse code (I used a button, timing the presses, but it can be used with other sources). The main difficulties were to implement the timer which was measuring the presses of the button and to store the data of the presses (I used 2 registers => 1 for the lenght of the morse message and 1 for the sequence of dots and dashes).</p><p>The decoder may be used together with a morse code encoder. It translates an array of letters, holding a message, to a digital output representing the morse code of the letter. This digital output has the same encoding as the one the decoder decodes.</p>",
     "picture": {
@@ -59,6 +63,7 @@
     "id": "puzzle-bot",
     "class": "project-link",
     "heading": "Puzzle Loop (SlitherLink) Solver &ndash; PuzzleBot",
+    "short-heading": "PuzzleLoop Solver",
     "secondaryHeading": "Together with two ex-colleagues from Gamesoft Ltd. &mdash; Apr 2017 &ndash; May 2017",
     "description": "<p>PuzzleBot is a software program which solves Slither link puzzles. It is written in C++ and the project required a great amount of experience in areas like algorithms, data structures, object recognition and graphical interface. The bot is designed to scan a puzzle opened in the browser, decompose it into several previously defined data structures, use its own algorithmic thinking to solve the puzzle and then complete it directly in the browser by mouse-clicking at the exact coordinates which the bot has previously calculated.</p><p>The project involved working with C#, C++, Desktop Application, Windows Form Applications, Data Structures, OOP , pointers and addressing, Machine Vision and Optical Character Recognition algorithms.</p><p style=\"font-weight-light font-italic\">Other Creators: Dimitar Georgiev, Dimiter Stoykov</p>",
     "picture": {
@@ -73,6 +78,7 @@
     "id": "football-manager",
     "class": "project-link",
     "heading": "Football Competition Manager",
+    "short-heading": "Football Manager",
     "secondaryHeading": "University of Surrey &mdash; May 2019",
     "description": "<p>As a project from university, I created a Football Competition Manager. It is an application, written in Java, whose aim is to manage the information of real-life football competition in an easy way. The application combines java classes concerned with the football part of the app and GUI made with WindowBuilderPro.</p>",
     "picture": {
@@ -87,6 +93,7 @@
     "id": "chitalishte-saglasie",
     "class": "project-link",
     "heading": "Website for Chitalishte 'Saglasie' Village Zhabokrat",
+    "short-heading": "Chitalishte 'Saglasie'",
     "secondaryHeading": "Voluntary Project &mdash; Nov 2017 &ndash; Jan 2018",
     "description": "<p>I created an online site as a voluntary project for an organisation in small village near Kyustendil called Zhabokrat. They use it in order to popularise old Bulgarian culture, which is gradually going extinct in Bulgaria due to urbanisation.</p>",
     "picture": {
