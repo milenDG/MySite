@@ -82,7 +82,7 @@ function createDataContainer(data) {
 
     if (data.picture.source) {
         var $a = $("<a target=\"_blank\" class=\"floating-anchor\" href=\"".concat(data.picture.link, "\" title=\"").concat(data.picture.link, "\">"));
-        var $img = $("<img width=\"".concat(data.picture.width, "\" src=\"").concat(data.picture.source, "\" alt=\"").concat(data.picture.alternative, "\" class=\"clickable-img\">"));
+        var $img = $("<img width=\"".concat(data.picture.width, "\" src=\"").concat(data.picture.source, "\" alt=\"").concat(data.picture.alternative, "\" class=\"clickable-img data-img\">"));
 
         if (!data.picture.isRounded) {
             $img.addClass('shadow-img rounded-img');

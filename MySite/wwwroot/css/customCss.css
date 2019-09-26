@@ -21,6 +21,12 @@
     margin-top: -20px;
 }
 
+.data-img {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
 @media (min-width: 992px) {
     #main-content {
         margin-top: 90px;
@@ -37,6 +43,14 @@
     .project-link {
         padding-top: 90px;
         margin-top: -90px;
+    }
+
+    .floating-anchor {
+        float: right;
+    }
+
+    .data-img {
+        margin-left: 20px;
     }
 }
 
@@ -127,12 +141,6 @@ mark {
     content: "";
     clear: both;
     display: table;
-}
-
-.floating-anchor {
-    float: right;
-    padding-top: 5px;
-    padding-left: 20px;
 }
 
 .footer-text-link {

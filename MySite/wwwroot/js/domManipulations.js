@@ -75,7 +75,7 @@ function replaceView(id) {
 }
 
 function createDataContainer(data) {
-    const $dataContainer = $(`<div id ="${data.id}" class="container">`);
+    const $dataContainer = $(`<div id ="${data.id}" class="container clearfix">`);
     if (data.class) {
         $dataContainer.addClass(data.class);
     }
@@ -90,7 +90,7 @@ function createDataContainer(data) {
 
     if (data.picture.source) {
         const $a = $(`<a target="_blank" class="floating-anchor" href="${data.picture.link}" title="${data.picture.link}">`);
-        const $img = $(`<img width="${data.picture.width}" src="${data.picture.source}" alt="${data.picture.alternative}" class="clickable-img">`);
+        const $img = $(`<img width="${data.picture.width}" src="${data.picture.source}" alt="${data.picture.alternative}" class="clickable-img data-img">`);
 
         if (!data.picture.isRounded) {
             $img.addClass('shadow-img rounded-img');
