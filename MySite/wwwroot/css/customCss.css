@@ -146,6 +146,9 @@ mark {
 .footer-text-link {
     color: #c2a60d;
 }
+.footer-text-link:hover {
+    color: lightseagreen;
+}
 
 .searched {
     background-color: #fcf4af;
@@ -166,4 +169,30 @@ mark {
     background-color: #1A535C;
     color: lightgray;
     border: 2px solid #1A535C;
+}
+
+.nav-link {
+    color: lightblue;
+}
+.nav-link:hover {
+    color: lightgray;
+}
+
+.navbar-brand {
+    color: white;
+}
+.navbar-brand:hover {
+    color: lightgray;
+}
+
+.active {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.active:hover {
+    color: lightgoldenrodyellow;
+    font-weight: bold;
+    font-style: italic;
 }

@@ -51,9 +51,6 @@
     <Content Update="wwwroot\image\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\image\logo2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Update="wwwroot\image\me-cropped.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

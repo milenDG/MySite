@@ -97,11 +97,11 @@
     "secondaryHeading": "Voluntary Project &mdash; Nov 2017 &ndash; Jan 2018",
     "description": "<p>I created an online site as a voluntary project for an organisation in small village near Kyustendil called Zhabokrat. They use it in order to popularise old Bulgarian culture, which is gradually going extinct in Bulgaria due to urbanisation.</p>",
     "picture": {
-      "width": 150,
-      "source": "svg/chitalishte.svg",
+      "width": 300,
+      "source": "image/chitalishte.jpg",
       "link": "https://chitalishte.wixsite.com/saglasie",
       "alternative": "svg/chitalishte.svg",
-      "isRounded": true
+      "isRounded": false
     }
   }
 ]
