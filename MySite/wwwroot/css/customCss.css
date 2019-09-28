@@ -71,7 +71,16 @@
     background-color: #94AEB1;
     color: #154047;
     margin: auto;
-    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+#map {
+    width: auto;
+    height: 250px;
+    margin-top: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 

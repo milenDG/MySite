@@ -282,9 +282,12 @@ function initMap() {
         lat: 51.237508,
         lng: -0.592832
     };
-
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 18,
         center: location
+    });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
     });
 }
