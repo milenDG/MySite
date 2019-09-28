@@ -279,9 +279,10 @@ function removeHighlight() {
 
 function initMap() {
     var location = {
-        lat: -25.344,
-        lng: 131.036
+        lat: 51.237508,
+        lng: -0.592832
     };
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
         center: location
