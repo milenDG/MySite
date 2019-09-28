@@ -19,6 +19,7 @@ let htmlInInnerHtml = {
 $(document).ready(() => {
     setViewsAndNavs();
     appendAllData();
+    initMap();
 });
 
 function setViewsAndNavs() {
@@ -80,7 +81,7 @@ function createDataContainer(data) {
         $dataContainer.addClass(data.class);
     }
 
-    const $h4 = $('<h4 class="font-weight-bold">');
+    const $h4 = $('<h3 class="font-weight-bold">');
     $h4.html(data.heading);
     $h4.append($('<br />'));
 
@@ -272,4 +273,13 @@ function removeHighlight() {
             findHtmlInInnerHtml(viewId);
         }
     }
+}
+
+function initMap() {
+    const location = { lat: -25.344, lng: 131.036 };
+
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: location
+    });
 }

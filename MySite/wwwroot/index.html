@@ -28,6 +28,7 @@
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="js/domManipulationsTranspiled.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE" type="text/javascript"></script>
     <link rel="stylesheet" href="css/customCss.css" />
 </head>
 <body onclick="hideProjects()">
@@ -96,23 +97,23 @@
     <div class="row">
         <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 rounded-img">
             <div id="about" class="container">
-                <h2 class="text-center font-weight-bold rounded-img">About me</h2>
+                <h1 class="text-center font-weight-bold rounded-img">About me</h1>
                 <hr/>
             </div>
             <div id="experience" class="container hidden">
-                <h2 class="text-center font-weight-bold rounded-img">Experience</h2>
+                <h1 class="text-center font-weight-bold rounded-img">Experience</h1>
                 <hr/>
             </div>
             <div id="education" class="container hidden">
-                <h2 class="text-center font-weight-bold rounded-img">Education</h2>
+                <h1 class="text-center font-weight-bold rounded-img">Education</h1>
                 <hr/>
             </div>
             <div id="projects" class="container hidden">
-                <h2 class="text-center font-weight-bold rounded-img">Projects</h2>
+                <h1 class="text-center font-weight-bold rounded-img">Projects</h1>
                 <hr/>
             </div>
             <div id="search" class="container hidden">
-                <h2 class="text-center font-weight-bold rounded-img">Search Results</h2>
+                <h1 class="text-center font-weight-bold rounded-img">Search Results</h1>
                 <hr/>
                 <section class="form-inline mb-2">
                     <input id="search-text-page" class="form-control mr-sm-2 col" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text-page').val().trim())">
@@ -123,10 +124,22 @@
         </div>
         <div class="col-xl-3 col-lg-4 col-md-5 text-center" style="padding-top: 20px; padding-bottom: 20px">
             <div style="padding-bottom: 30px;">
-                <img class="rounded-img shadow-img" src="image/me.jpg" width="250" alt="Software Engineer"/>
+                <img class="rounded-img shadow-img" src="image/me.jpg" width="250" alt="Software Engineer" />
             </div>
-            <div class="LI-profile-badge rounded-img" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="milen-georgiev1">
+            <div class="LI-profile-badge rounded-img" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="milen-georgiev1"  style="padding-bottom: 30px;">
                 <a class="LI-simple-link" href='https://uk.linkedin.com/in/milen-georgiev1?trk=profile-badge' target="_blank">Milen G.</a>
+            </div>
+            <div id="address-div" class="rounded-img" style="width: 250px">
+                <h4 class="text-center font-weight-bold rounded-img">Address</h4>
+                <hr />
+                <ul class="list-unstyled text-left">
+                    <li>The Oval 25</li>
+                    <li>Guildford</li>
+                    <li>Surrey</li>
+                    <li>United Kingdom</li>
+                    <li>GU2 7TS</li>
+                    <li id="map" style="margin-top: 10px;"></li>
+                </ul>
             </div>
         </div>
     </div>

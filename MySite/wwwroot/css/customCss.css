@@ -63,9 +63,15 @@
 
 #text-content-holder {
     background-color: #94AEB1;
-    border-width: 10px !important;
     color: #154047;
-    padding: 15px
+    padding: 5px;
+}
+
+#address-div {
+    background-color: #94AEB1;
+    color: #154047;
+    margin: auto;
+    padding: 15px;
 }
 
 
@@ -103,7 +109,12 @@ a>.svg {
     margin-right: 10px;
 }
 
-h2 {
+h1 {
+    background-color: #B3C4C7;
+    padding: 10px;
+    margin-top: 5px;
+}
+h4 {
     background-color: #B3C4C7;
     padding: 10px;
     margin-top: 5px;

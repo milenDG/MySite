@@ -18,6 +18,7 @@ var htmlInInnerHtml = {
 $(document).ready(function () {
     setViewsAndNavs();
     appendAllData();
+    initMap();
 });
 
 function setViewsAndNavs() {
@@ -67,13 +68,13 @@ function replaceView(id) {
 }
 
 function createDataContainer(data) {
-    var $dataContainer = $("<div id =\"".concat(data.id, "\" class=\"container\">"));
+    var $dataContainer = $("<div id =\"".concat(data.id, "\" class=\"container clearfix\">"));
 
     if (data.class) {
         $dataContainer.addClass(data.class);
     }
 
-    var $h4 = $('<h4 class="font-weight-bold">');
+    var $h4 = $('<h3 class="font-weight-bold">');
     $h4.html(data.heading);
     $h4.append($('<br />'));
     var $small = $('<small class="font-italic text-muted secondary-text">');
@@ -275,4 +276,15 @@ function removeHighlight() {
             findHtmlInInnerHtml(viewId);
         }
     }
+}
+
+function initMap() {
+    var location = {
+        lat: -25.344,
+        lng: 131.036
+    };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: location
+    });
 }
