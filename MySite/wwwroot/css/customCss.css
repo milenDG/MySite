@@ -64,7 +64,8 @@
 #text-content-holder {
     background-color: #94AEB1;
     color: #154047;
-    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 #address-div {
@@ -72,15 +73,12 @@
     color: #154047;
     margin: auto;
     padding-top: 10px;
-    padding-bottom: 1px;
 }
 
 #map {
     width: auto;
     height: 250px;
     margin-top: 10px;
-    margin-left: 1px;
-    margin-right: 1px;
 }
 
 
@@ -121,7 +119,6 @@ a>.svg {
 h1 {
     background-color: #B3C4C7;
     padding: 10px;
-    margin-top: 5px;
 }
 #address-heading {
     background-color: #B3C4C7;
@@ -134,7 +131,16 @@ p {
 }
 
 .rounded-img {
-    border-radius: 15px !important;
+    border-radius: 15px;
+}
+
+.left-rounded-img {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.bottom-rounded-img {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .shadow-img {
