@@ -19,7 +19,6 @@ let htmlInInnerHtml = {
 $(document).ready(() => {
     setViewsAndNavs();
     appendAllData();
-    initMap();
 });
 
 function setViewsAndNavs() {
@@ -282,4 +281,6 @@ function initMap() {
         zoom: 4,
         center: location
     });
+
+    console.dir(map);
 }

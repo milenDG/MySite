@@ -18,7 +18,6 @@ var htmlInInnerHtml = {
 $(document).ready(function () {
     setViewsAndNavs();
     appendAllData();
-    initMap();
 });
 
 function setViewsAndNavs() {
