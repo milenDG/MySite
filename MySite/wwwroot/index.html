@@ -4,52 +4,40 @@
     <meta charset="utf-8" />
     <meta name="description" content="Website of Milen Georgiev, a Software Engineer and student at University of Surrey.">
 
+    <!--OG meta-->
     <meta property="og:title" content="Milen Georgiev - Software Engineer">
     <meta property="og:description" content="Website of Milen Georgiev, a Software Engineer and student at University of Surrey.">
     <meta property="og:image" content="https://www.milengeorgiev.co.uk/image/me.jpg">
     <meta property="og:url" content="https://www.milengeorgiev.co.uk/">
 
+    <!--Twitter meta-->
     <meta name="twitter:title" content="Milen Georgiev - Software Engineer">
     <meta name="twitter:description" content="Website of Milen Georgiev, a Software Engineer and student at University of Surrey.">
     <meta name="twitter:image" content="https://www.milengeorgiev.co.uk/image/me.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta property="fb:app_id" content="952208318449880" />
 
     <title>Milen Georgiev - Software Engineer</title>
+
+    <!--Links-->
     <link rel="icon" href="image/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-    <script src="js/domManipulationsTranspiled.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
-    <link rel="stylesheet" href="css/customCss.css" />
+    <link rel="stylesheet" href="css/customCss.min.css" />
+
+    <!--Scripts-->
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" type="text/javascript"></script>
+    <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+    <script async defer src="https://platform.linkedin.com/badges/js/profile.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js" type="text/javascript"></script>
+    <script src="js/domManipulationsTranspiled.js" type="text/javascript"></script>
+    <script src="js/facebookScript.js" type="text/javascript"></script>
 </head>
 <body onclick="hideProjects()">
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '952208318449880',
-            xfbml      : true,
-            version    : 'v4.0'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-<header onclick="removeHighlight()" id="header" class="navbar navbar-expand-lg">
+<header onclick="removeHighlight()" id="header" class="navbar navbar-expand-lg navbar-dark">
     <a href="#" onclick="replaceView('about')">
         <img src="/svg/logo.svg" class="rounded float-left mr-0 mr-md-2 clickable-img" alt="logo" height="50" width="50">
     </a>
@@ -73,12 +61,12 @@
                 <a id="projects-nav" onclick="replaceView('projects')" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                 <div id="projects-dropdown-menu" onmouseover="showProjects()" onmouseout="hideProjects()" class="dropdown-menu">
                     <a class="dropdown-item" href="#nato-bulcod" onclick="replaceView('projects')">NATO BulCod</a>
-                    <a class="dropdown-item" href="#regix" onclick="replaceView('projects')">RegIX (Registry Information eXchange system)</a>
+                    <a class="dropdown-item" href="#regix" onclick="replaceView('projects')">Registry Information Exchange</a>
                     <a class="dropdown-item" href="#multi-touch" onclick="replaceView('projects')">Android Multi-touch Tester</a>
-                    <a class="dropdown-item" href="#morse-code" onclick="replaceView('projects')">Morse Code Encoder and Decoder</a>
-                    <a class="dropdown-item" href="#football-manager" onclick="replaceView('projects')">Football Competition Manager</a>
+                    <a class="dropdown-item" href="#morse-code" onclick="replaceView('projects')">Morse Encoder/Decoder</a>
+                    <a class="dropdown-item" href="#football-manager" onclick="replaceView('projects')">Football Manager</a>
                     <a class="dropdown-item" href="#puzzle-bot" onclick="replaceView('projects')">PuzzleBot</a>
-                    <a class="dropdown-item" href="#chitalishte-saglasie" onclick="replaceView('projects')">Chitalishte 'Saglasie' Village Zhabokrat</a>
+                    <a class="dropdown-item" href="#chitalishte-saglasie" onclick="replaceView('projects')">'Saglasie' Village Zhabokrat</a>
                 </div>
             </li>
             <li class="nav-item">
