@@ -98,10 +98,10 @@ img.svg {
     opacity: 1;
     transition: 0.7s;
 }
-    img.svg:hover {
-        opacity: 0.4;
-        transition: 0.7s;
-    }
+img.svg:hover {
+    opacity: 0.4;
+    transition: 0.7s;
+}
 
 .LI-badge-container-vertical-light {
     box-shadow: 0 10px 20px #94AEB1 !important;
