@@ -200,26 +200,27 @@ mark {
 
 .nav-link {
     color: lightblue;
+    font-style: italic;
 }
 .nav-link:hover {
-    color: lightgray;
+    color: lightgray !important;
 }
 
 .navbar-brand {
     color: white;
+    font-family: Consolas;
+    font-size: 22px;
 }
 .navbar-brand:hover {
-    color: lightgray;
+    color: lightgoldenrodyellow !important;
 }
 
-.active {
+.nav-link.active {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     font-style: italic;
 }
-
-.active:hover {
-    color: lightgoldenrodyellow;
-    font-weight: bold;
-    font-style: italic;
+.nav-link.active:hover {
+    color: lightgoldenrodyellow !important;
+    transition: 300ms;
 }
