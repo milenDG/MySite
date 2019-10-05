@@ -3,6 +3,7 @@
 var currentView = 'about';
 var $views = {};
 var $navs = {};
+var highlighted = false;
 var idToHeading = {
     'about': 'About me',
     'experience': 'Experience',
@@ -226,6 +227,10 @@ function highlightTextInView(toSearch, viewId) {
 
         viewHtmlLower = viewHtml.toLowerCase();
     } while (index !== -1);
+
+    setTimeout(function () {
+        return highlighted = true;
+    }, 2000);
 }
 
 function findHtmlInInnerHtml(viewId) {
@@ -268,6 +273,10 @@ function insertInString(string, idx, rem, str) {
 ;
 
 function removeHighlight() {
+    if (!highlighted) {
+        return;
+    }
+
     for (var viewId in $views) {
         if ($views.hasOwnProperty(viewId)) {
             var html = $views[viewId].html();
@@ -277,6 +286,8 @@ function removeHighlight() {
             findHtmlInInnerHtml(viewId);
         }
     }
+
+    highlighted = false;
 }
 
 function initMap() {
