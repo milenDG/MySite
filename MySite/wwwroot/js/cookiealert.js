@@ -12,14 +12,15 @@ function showCookieNotice() {
 
     // Show the alert if we cant find the "acceptCookies" cookie
     if (!getCookie("acceptCookies")) {
-        cookieAlert.classList.add("show");
+        cookieAlert.classList.add("cookieshow");
     }
 
     // When clicking on the agree button, create a 1 year
     // cookie to remember user's choice and close the banner
     acceptCookies.addEventListener("click", function () {
         setCookie("acceptCookies", true, 365);
-        cookieAlert.classList.remove("show");
+        cookieAlert.classList.remove("cookieshow");
+        setTimeout(() => cookieAlert.classList.add("cookiehide"), 600);
     });
 
     // Cookie functions from w3schools

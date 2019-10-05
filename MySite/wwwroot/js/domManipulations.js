@@ -87,7 +87,7 @@ function createDataContainer(data) {
     $h4.html(data.heading);
     $h4.append($('<br />'));
 
-    const $small = $('<small class="font-italic text-muted secondary-text">');
+    const $small = $('<small class="font-italic secondary-text">');
     $small.html(data.secondaryHeading);
     $dataContainer.append($h4.append($small));
 
@@ -186,7 +186,7 @@ function search(string) {
     }
 
     if (!hasMatch) {
-        $searchView.append($(`<div class="font-italic text-warning">No match for "${string}" was found in the text!</div>`));
+        $searchView.append($(`<div class="font-italic secondary-text">No match for "${string}" was found in the text!</div>`));
     }
 
     $('#search-text').val(string);

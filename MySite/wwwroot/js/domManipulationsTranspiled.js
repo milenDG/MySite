@@ -79,7 +79,7 @@ function createDataContainer(data) {
     var $h4 = $('<h3 class="font-weight-bold">');
     $h4.html(data.heading);
     $h4.append($('<br />'));
-    var $small = $('<small class="font-italic text-muted secondary-text">');
+    var $small = $('<small class="font-italic secondary-text">');
     $small.html(data.secondaryHeading);
     $dataContainer.append($h4.append($small));
 
@@ -128,7 +128,7 @@ function search(string) {
     replaceView('search');
 
     if (!string) {
-        $searchView.append($('<div class="font-italic text-warning">Please enter text for search!</div>'));
+        $searchView.append($('<div class="font-italic secondary-text">Please enter text for search!</div>'));
         return;
     }
 
@@ -169,7 +169,7 @@ function search(string) {
     }
 
     if (!hasMatch) {
-        $searchView.append($("<div class=\"font-italic text-warning\">No match for \"".concat(string, "\" was found in the text!</div>")));
+        $searchView.append($("<div class=\"font-italic secondary-text\">No match for \"".concat(string, "\" was found in the text!</div>")));
     }
 
     $('#search-text').val(string);
@@ -269,8 +269,6 @@ function hideProjects() {
 function insertInString(string, idx, rem, str) {
     return string.slice(0, idx) + str + string.slice(idx + Math.abs(rem));
 }
-
-;
 
 function removeHighlight() {
     if (!highlighted) {

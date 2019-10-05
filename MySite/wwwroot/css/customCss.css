@@ -34,11 +34,11 @@
     }
 
     #header {
-        position:fixed;
-        top:0;
-        right:0;
-        left:0;
-        z-index:1030
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030
     }
 
     .project-link {
@@ -69,6 +69,7 @@
     padding-top: 15px;
     padding-bottom: 20px;
 }
+
 #address-div {
     background-color: #94AEB1;
     color: #154047;
@@ -91,19 +92,21 @@
     opacity: 1;
     transition: 0.7s;
 }
-.clickable-img:hover {
-    opacity: 0.7;
-    transition: 0.7s;
-}
+
+    .clickable-img:hover {
+        opacity: 0.7;
+        transition: 0.7s;
+    }
 
 img.svg {
     opacity: 1;
     transition: 0.7s;
 }
-img.svg:hover {
-    opacity: 0.4;
-    transition: 0.7s;
-}
+
+    img.svg:hover {
+        opacity: 0.4;
+        transition: 0.7s;
+    }
 
 .LI-badge-container-vertical-light {
     box-shadow: 0 10px 20px #94AEB1 !important;
@@ -113,7 +116,7 @@ img.svg:hover {
     color: #99861d !important;
 }
 
-a>.svg {
+a > .svg {
     margin-right: 10px;
 }
 
@@ -121,6 +124,7 @@ h1 {
     background-color: #B3C4C7;
     padding: 10px;
 }
+
 #address-heading {
     background-color: #B3C4C7;
     padding: 10px;
@@ -139,6 +143,7 @@ p {
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
+
 .bottom-rounded-img {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -173,9 +178,10 @@ mark {
 .footer-text-link {
     color: #c2a60d;
 }
-.footer-text-link:hover {
-    color: lightseagreen;
-}
+
+    .footer-text-link:hover {
+        color: lightseagreen;
+    }
 
 .searched {
     background-color: #fcf4af;
@@ -183,8 +189,8 @@ mark {
 
 .link-button {
     background-color: inherit;
-    color: #1A535C;
-    border: 2px solid #1A535C;
+    color: #99861d;
+    border: 2px solid #99861d;
     text-align: center;
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -192,35 +198,37 @@ mark {
     cursor: pointer;
 }
 
-.link-button:hover {
-    background-color: #1A535C;
-    color: lightgray;
-    border: 2px solid #1A535C;
-}
+    .link-button:hover {
+        background-color: #99861d;
+        color: lightgray;
+    }
 
 .nav-link {
     color: lightblue;
     font-style: italic;
 }
-.nav-link:hover {
-    color: lightgray !important;
-}
+
+    .nav-link:hover {
+        color: lightgray !important;
+    }
 
 .navbar-brand {
     color: white;
     font-family: Consolas;
     font-size: 22px;
 }
-.navbar-brand:hover {
-    color: lightgoldenrodyellow !important;
-}
+
+    .navbar-brand:hover {
+        color: lightgoldenrodyellow !important;
+    }
 
 .nav-link.active {
     color: white;
     font-weight: 500;
     font-style: italic;
 }
-.nav-link.active:hover {
-    color: lightgoldenrodyellow !important;
-    transition: 300ms;
-}
+
+    .nav-link.active:hover {
+        color: lightgoldenrodyellow !important;
+        transition: 300ms;
+    }
