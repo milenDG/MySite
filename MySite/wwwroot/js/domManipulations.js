@@ -1,6 +1,7 @@
 ﻿let currentView = 'about';
 let $views = {};
 let $navs = {};
+let highlighted = false;
 
 let idToHeading = {
     'about': 'About me',
@@ -195,8 +196,6 @@ function search(string) {
 function highlightTextInView(toSearch, viewId) {
     const $view = $(`#${viewId}`);
 
-    
-
     let index = -toSearch.length - 30;
     let viewHtml = $view.html();
     let viewHtmlLower = $view.html().toLowerCase();
@@ -225,6 +224,8 @@ function highlightTextInView(toSearch, viewId) {
 
         viewHtmlLower = viewHtml.toLowerCase();
     } while (index !== -1);
+
+    setTimeout(() => highlighted = true, 2000);    
 }
 
 function findHtmlInInnerHtml(viewId) {
@@ -264,6 +265,9 @@ function insertInString(string, idx, rem, str) {
 };
 
 function removeHighlight() {
+    if (!highlighted) {
+        return;
+    }
     for (const viewId in $views) {
         if ($views.hasOwnProperty(viewId)) {
             let html = $views[viewId].html();
@@ -274,6 +278,7 @@ function removeHighlight() {
             findHtmlInInnerHtml(viewId);
         }
     }
+    highlighted = false;
 }
 
 function initMap() {
