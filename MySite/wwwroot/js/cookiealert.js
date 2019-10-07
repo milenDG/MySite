@@ -12,6 +12,7 @@ function showCookieNotice() {
 
     // Show the alert if we cant find the "acceptCookies" cookie
     if (!getCookie("acceptCookies")) {
+        cookieAlert.classList.remove("cookiehide");
         cookieAlert.classList.add("cookieshow");
     }
 
