@@ -1,0 +1,9 @@
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^milengeorgiev.co.uk[nc]
+RewriteRule ^(.*)$ http://www.milengeorgiev.co.uk/$1 [r=301,nc]
+
+//Caching schema
+<FilesMatch "\.(jpg|png|css|js|svg|jpeg)$">
+Header set Cache-Control "public, proxy-revalidate, max-age=160704000"
