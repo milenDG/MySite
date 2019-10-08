@@ -36,7 +36,8 @@
             {
                 originalPath = this.HttpContext.Items["originalPath"] as string;
             }
-            _telemetryClient.TrackEvent("Error.PageNotFound", new Dictionary<string, string>
+
+            this._telemetryClient?.TrackEvent("Error.PageNotFound", new Dictionary<string, string>
             {
                 ["originalPath"] = originalPath
             });
