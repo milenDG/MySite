@@ -16,6 +16,8 @@
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddApplicationInsightsTelemetry();
+
             services.AddMvc(options =>
             {
                 options.CacheProfiles.Add("Default30",
@@ -47,10 +49,24 @@
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseDefaultFiles(new DefaultFilesOptions
+            else
             {
-                DefaultFileNames = new List<string> { "index.html" }
+                app.UseExceptionHandler("/error/500");
+                app.UseHsts();
+            }
+
+            app.Use(async (ctx, next) =>
+            {
+                await next();
+
+                if (ctx.Response.StatusCode == 404 && !ctx.Response.HasStarted)
+                {
+                    //Re-execute the request so the user gets the error page
+                    string originalPath = ctx.Request.Path.Value;
+                    ctx.Items["originalPath"] = originalPath;
+                    ctx.Request.Path = "/error/404";
+                    await next();
+                }
             });
 
             app.UseResponseCompression();
