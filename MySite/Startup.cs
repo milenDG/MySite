@@ -8,6 +8,7 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
+    using Microsoft.Net.Http.Headers;
 
     public class Startup
     {
@@ -61,7 +62,15 @@
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = ctx =>
+                {
+                    const int durationInSeconds = 7 * 60 * 60 * 24;
+                    ctx.Context.Response.Headers[HeaderNames.CacheControl] =
+                        "public,max-age=" + durationInSeconds;
+                }
+            });
         }
     }
 }
