@@ -1,0 +1,22 @@
+[
+  {
+    "outputFileName": "wwwroot/min/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/customCss.css",
+      "wwwroot/css/cookieAlert.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/min/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/cookiealert.js",
+      "wwwroot/js/domManipulations.tran.js",
+      "wwwroot/js/facebookScript.js",
+      "wwwroot/js/linkedIn.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  }
+]
