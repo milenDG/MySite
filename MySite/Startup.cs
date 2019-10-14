@@ -60,8 +60,6 @@
 
                 if (ctx.Response.StatusCode == 404 && !ctx.Response.HasStarted)
                 {
-                    // Change teh status code to 200.
-                    ctx.Response.StatusCode = 200;
                     //Re-execute the request so the user gets the error page
                     string originalPath = ctx.Request.Path.Value;
                     ctx.Items["originalPath"] = originalPath;
