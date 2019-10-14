@@ -1,7 +1,18 @@
-﻿@{
-    ViewBag.Title = "404";
+﻿@using MySite.Controllers;
+@{
+    Layout = "_Layout";
+    ViewBag.Title = ErrorController.NotFoundViewTitle;
 }
 
-<h1>404 - Page not found</h1>
+<head>
+    <title>@ErrorController.NotFoundViewTitle</title>
+</head>
 
-<p>Oops, better check that URL.</p>
+<div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 left-rounded-img">
+    <div id="error" class="container">
+        <h1 class="text-center font-weight-bold rounded-img">404 - Page not found</h1>
+        <hr />
+        <p>Oops, better check that URL.</p>
+    </div>
+</div>
+

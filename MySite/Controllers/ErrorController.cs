@@ -10,6 +10,9 @@
     {
         private readonly TelemetryClient _telemetryClient;
 
+        public const string NotFoundViewTitle = "Page not found";
+        public const string ServerErrorViewTitle = "Page not found";
+
         public ErrorController(TelemetryClient telemetryClient)
         {
             this._telemetryClient = telemetryClient;

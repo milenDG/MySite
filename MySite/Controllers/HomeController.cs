@@ -4,6 +4,8 @@
 
     public class HomeController : Controller
     {
+        public const string ViewTitle = "Milen Georgiev - Software Engineer";
+
         [Route("")]
         public IActionResult Index()
         {

@@ -16,12 +16,18 @@ var htmlInInnerHtml = {
     'education': [],
     'projects': []
 };
-$(document).ready(function () {
-    setViewsAndNavs();
-    appendAllData();
+
+function onLoad(homeTitle) {
+    if (document.title === homeTitle) {
+        setViewsAndNavs();
+        appendAllData();
+    }
+
     loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE&maptype=satellite&callback=initMap', function () { });
     showCookieNotice();
-});
+}
+
+;
 
 function setViewsAndNavs() {
     $views = {
@@ -128,7 +134,7 @@ function search(string) {
     replaceView('search');
 
     if (!string) {
-        $searchView.append($('<div class="font-italic secondary-text">Please enter text for search!</div>'));
+        $searchView.append($('<div class="font-italic text-warning">Please enter text for search!</div>'));
         return;
     }
 
@@ -269,6 +275,8 @@ function hideProjects() {
 function insertInString(string, idx, rem, str) {
     return string.slice(0, idx) + str + string.slice(idx + Math.abs(rem));
 }
+
+;
 
 function removeHighlight() {
     if (!highlighted) {

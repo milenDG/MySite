@@ -17,12 +17,15 @@ let htmlInInnerHtml = {
     'projects': []
 }
 
-$(document).ready(() => {
-    setViewsAndNavs();
-    appendAllData();
+function onLoad(homeTitle) {
+    if (document.title === homeTitle) {
+        setViewsAndNavs();
+        appendAllData();
+    }
+    
     loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE&maptype=satellite&callback=initMap', function () {});
     showCookieNotice();
-});
+};
 
 function setViewsAndNavs() {
     $views = {
