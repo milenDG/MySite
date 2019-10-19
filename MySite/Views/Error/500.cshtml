@@ -1,7 +1,10 @@
 ﻿@{
     ViewData["Title"] = MySite.Controllers.ErrorController.ServerErrorViewTitle;
+    Layout = "_Layout";
 }
 
-<h1>We have a problem</h1>
-
-<p>Sorry, an error occurred while executing your request.</p>
+<div id="error" class="container">
+    <h1 class="text-center font-weight-bold rounded-img">505 - Server Error</h1>
+    <hr />
+    <p>Sorry, an error occurred while executing your request.</p>
+</div>

@@ -23,8 +23,8 @@ function onLoad(homeTitle) {
         appendAllData();
     }
 
-    loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE&maptype=satellite&callback=initMap', function () { });
     showCookieNotice();
+    loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE&maptype=satellite&callback=initMap', function () { });
 }
 
 ;
@@ -298,11 +298,11 @@ function removeHighlight() {
 
 function initMap() {
     var location = {
-        lat: 51.237508,
-        lng: -0.592832
+        lat: 51.242901,
+        lng: -0.588698
     };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 18,
+        zoom: 17,
         center: location
     });
     var marker = new google.maps.Marker({

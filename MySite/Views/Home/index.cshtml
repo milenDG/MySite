@@ -3,75 +3,29 @@
     Layout = "_Layout";
     ViewBag.Title = @HomeController.ViewTitle;
 }
-<header id="header" class="navbar navbar-expand-lg navbar-dark">
-    <a href="#" onclick="replaceView('about')">
-        <img src="/svg/logo.svg" class="rounded float-left mr-0 mr-md-2 clickable-img" alt="logo" height="50" width="50">
-    </a>
-    <a class="navbar-brand font-weight-bold" href="#" onclick="replaceView('about')">Milen Georgiev</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a id="about-nav" class="nav-link active" href="#" onclick="replaceView('about')">About me</a>
-            </li>
-            <li class="nav-item">
-                <a id="experience-nav" class="nav-link" href="#" onclick="replaceView('experience')">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a id="education-nav" class="nav-link" href="#" onclick="replaceView('education')">Education</a>
-            </li>
-            <li id="projects-dropdown" onmouseover="showProjects()" class="nav-item dropdown">
-                <a id="projects-nav" onclick="replaceView('projects')" onmouseout="hideProjects()" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                <div id="projects-dropdown-menu" onmouseover="showProjects()" onmouseout="hideProjects()" class="dropdown-menu" style="margin-top: 0px;">
-                    <a class="dropdown-item" href="#nato-bulcod" onclick="replaceView('projects')">NATO BulCod</a>
-                    <a class="dropdown-item" href="#regix" onclick="replaceView('projects')">Registry Information Exchange</a>
-                    <a class="dropdown-item" href="#multi-touch" onclick="replaceView('projects')">Android Multi-touch Tester</a>
-                    <a class="dropdown-item" href="#morse-code" onclick="replaceView('projects')">Morse Encoder/Decoder</a>
-                    <a class="dropdown-item" href="#puzzle-bot" onclick="replaceView('projects')">PuzzleBot</a>
-                    <a class="dropdown-item" href="#football-manager" onclick="replaceView('projects')">Football Manager</a>
-                    <a class="dropdown-item" href="#chitalishte-saglasie" onclick="replaceView('projects')">'Saglasie' Village Zhabokrat</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a id="search-nav" class="nav-link" href="#" onclick="replaceView('search')">Search</a>
-            </li>
-        </ul>
-        <section class="form-inline my-2 my-lg-0">
-            <input id="search-text" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text').val().trim())">
-            <button onclick="search($('#search-text').val().trim())" class="btn btn-outline-light my-2 my-sm-0 font-italic font-weight-bold">Search</button>
-        </section>
-    </div>
-</header>
-<div id="main-content" class="container col-11 rounded-img">
-    <div class="row">
-        <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 left-rounded-img">
-
-
-            <div id="about" class="container">
-                <h1 class="text-center font-weight-bold rounded-img">About me</h1>
-                <hr />
-            </div>
-            <div id="experience" class="container hidden">
-                <h1 class="text-center font-weight-bold rounded-img">Experience</h1>
-                <hr />
-            </div>
-            <div id="education" class="container hidden">
-                <h1 class="text-center font-weight-bold rounded-img">Education</h1>
-                <hr />
-            </div>
-            <div id="projects" class="container hidden">
-                <h1 class="text-center font-weight-bold rounded-img">Projects</h1>
-                <hr />
-            </div>
-            <div id="search" class="container hidden">
-                <h1 class="text-center font-weight-bold rounded-img">Search Results</h1>
-                <hr />
-                <section class="form-inline mb-2">
-                    <input id="search-text-page" class="form-control mr-sm-2 col" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text-page').val().trim())">
-                    <button onclick="search($('#search-text-page').val().trim());" class="btn btn-outline-light  my-2 my-sm-0">Search</button>
-                </section>
-                <hr />
-            </div>
+<div id="about" class="container">
+    <h1 class="text-center font-weight-bold rounded-img">About me</h1>
+    <hr />
+</div>
+<div id="experience" class="container hidden">
+    <h1 class="text-center font-weight-bold rounded-img">Experience</h1>
+    <hr />
+</div>
+<div id="education" class="container hidden">
+    <h1 class="text-center font-weight-bold rounded-img">Education</h1>
+    <hr />
+</div>
+<div id="projects" class="container hidden">
+    <h1 class="text-center font-weight-bold rounded-img">Projects</h1>
+    <hr />
+</div>
+<div id="search" class="container hidden">
+    <h1 class="text-center font-weight-bold rounded-img">Search Results</h1>
+    <hr />
+    <section class="form-inline mb-2">
+        <input id="search-text-page" class="form-control mr-sm-2 col" type="search" placeholder="Search" aria-label="Search" onkeyup="search($('#search-text-page').val().trim())">
+        <button onclick="search($('#search-text-page').val().trim());" class="btn btn-outline-light  my-2 my-sm-0">Search</button>
+    </section>
+    <hr />
+</div>

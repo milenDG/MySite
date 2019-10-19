@@ -40,29 +40,42 @@
 
     <script type="application/ld+json">
         {
-        "@@context": "https://schema.org/",
-        "@@type": "Person",
-        "name": "Milen",
-        "url": "https://milengeorgiev.co.uk",
-        "image": "https://milengeorgiev.co.uk/image/me.jpg",
-        "sameAs": [
-        "https://www.facebook.com/milendg1",
-        "https://twitter.com/milengeorgievuk",
-        "https://www.linkedin.com/in/milen-georgiev1/",
-        "https://github.com/milenDG",
-        "https://milengeorgiev.co.uk",
-        "https://www.instagram.com/milen_georgiev_/"
-        ],
-        "jobTitle": "Software Engineer",
-        "worksFor": {
-        "@@type": "Organization",
-        "name": "University of Surrey"
-        }
+            "@@context": "https://schema.org/",
+            "@@type": "Person",
+            "name": "Milen",
+            "url": "https://milengeorgiev.co.uk",
+            "image": "https://milengeorgiev.co.uk/image/me.jpg",
+            "sameAs": [
+                "https://www.facebook.com/milendg1",
+                "https://twitter.com/milengeorgievuk",
+                "https://www.linkedin.com/in/milen-georgiev1/",
+                "https://github.com/milenDG",
+                "https://milengeorgiev.co.uk",
+                "https://www.instagram.com/milen_georgiev_/"
+            ],
+            "jobTitle": "Software Engineer",
+            "worksFor": {
+                "@@type": "Organization",
+                "name": "University of Surrey"
+            }
         }
     </script>
 </head>
 <body onclick="removeHighlight()" onload="onLoad('@HomeController.ViewTitle')">
+@{
+    if (ViewBag.Title == ErrorController.NotFoundViewTitle || ViewBag.Title == ErrorController.ServerErrorViewTitle)
+    {
+        await Html.RenderPartialAsync("Headers/HeaderProblem");
+    }
+    else
+    {
+        await Html.RenderPartialAsync("Headers/HeaderOK");
+    }
+}
 
+<div id="main-content" class="container col-11 rounded-img">
+    <div class="row">
+        <div id="text-content-holder" class="col-xl-9 col-lg-8 col-md-7 left-rounded-img">
             @RenderBody()
         </div>
 
@@ -77,11 +90,11 @@
                 <h4 id="address-heading" class="text-center font-weight-bold rounded-img" style="margin-left: 15px; margin-right: 15px;">Address</h4>
                 <hr />
                 <ul class="list-unstyled text-left font-italic" style="padding-left: 15px; padding-right: 15px;">
-                    <li>The Oval 25</li>
+                    <li>University of Surrey</li>
                     <li>Guildford</li>
                     <li>Surrey</li>
                     <li>United Kingdom</li>
-                    <li>GU2 7TS</li>
+                    <li>GU2 7XH</li>
                 </ul>
                 <div id="map" class="bottom-rounded-img"></div>
             </div>
