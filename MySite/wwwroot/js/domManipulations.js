@@ -48,7 +48,7 @@ function setViewsAndNavs() {
 function appendAllData() {
     $.getJSON('/json/about.json',
         (json) => {
-            appendSingleData(json, $('#about'));
+            appendSingleData(json, $('#about-text'));
             findHtmlInInnerHtml('about');
         });
     $.getJSON('/json/experience.json',

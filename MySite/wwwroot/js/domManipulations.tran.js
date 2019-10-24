@@ -4,12 +4,14 @@ var currentView = 'about';
 var $views = {};
 var $navs = {};
 var highlighted = false;
-var idToHeading = {
+
+let idToHeading = {
     'about': 'About me',
     'experience': 'Experience',
     'education': 'Education',
     'projects': 'Projects'
 };
+
 var htmlInInnerHtml = {
     'about': [],
     'experience': [],
@@ -48,7 +50,7 @@ function setViewsAndNavs() {
 
 function appendAllData() {
     $.getJSON('/json/about.json', function (json) {
-        appendSingleData(json, $('#about'));
+        appendSingleData(json, $('#about-text'));
         findHtmlInInnerHtml('about');
     });
     $.getJSON('/json/experience.json', function (json) {
