@@ -7,6 +7,7 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
+    using Microsoft.AspNetCore.Rewrite;
     using Microsoft.Net.Http.Headers;
 
     public class Startup
@@ -51,6 +52,10 @@
                 app.UseHsts();
             }
 
+            var rewrite = new RewriteOptions().AddRedirectToWwwPermanent();
+
+            app.UseRewriter(rewrite);
+
             app.Use(async (ctx, next) =>
             {
                 await next();
@@ -83,6 +88,8 @@
                         "public,max-age=" + durationInSeconds;
                 }
             });
+
+            Microsoft.AspNetCore.Rewrite.RewriteOptions
         }
     }
 }
