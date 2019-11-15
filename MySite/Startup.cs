@@ -13,8 +13,6 @@
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddLetsEncrypt();
-
             services.AddApplicationInsightsTelemetry();
 
             services.AddMvc(options =>
