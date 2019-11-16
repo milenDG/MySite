@@ -1,5 +1,6 @@
 ﻿namespace MySite
 {
+    using System.Collections.Generic;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
@@ -7,7 +8,9 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
+    using System.Net;
     using Microsoft.AspNetCore.Rewrite;
+    using Microsoft.AspNetCore.Rewrite.Internal;
     using Microsoft.Net.Http.Headers;
 
     public class Startup
@@ -52,7 +55,12 @@
                 app.UseHsts();
             }
 
-            var rewrite = new RewriteOptions().AddRedirectToWwwPermanent();
+            var rewrite = new RewriteOptions()
+                /*.AddRedirectToWwwPermanent()
+                .AddRedirect("milen\\.azurewebsites\\.net",
+                    "www.milengeorgiev.co.uk",
+                    (int)HttpStatusCode.PermanentRedirect);*/
+                .AddIISUrlRewrite(env.ContentRootFileProvider, "web.config");
 
             app.UseRewriter(rewrite);
 
