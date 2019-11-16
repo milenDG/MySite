@@ -21,7 +21,10 @@ function showCookieNotice() {
     acceptCookies.addEventListener("click", function () {
         setCookie("acceptCookies", true, 365);
         cookieAlert.classList.remove("cookieshow");
-        setTimeout(() => cookieAlert.classList.add("cookiehide"), 600);
+        setTimeout(function ()
+        {
+            cookieAlert.classList.add("cookiehide")
+        }, 600);
     });
 
     // Cookie functions from w3schools

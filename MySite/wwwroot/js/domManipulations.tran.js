@@ -4,32 +4,27 @@ var currentView = 'about';
 var $views = {};
 var $navs = {};
 var highlighted = false;
-
-let idToHeading = {
+var idToHeading = {
     'about': 'About me',
     'experience': 'Experience',
     'education': 'Education',
     'projects': 'Projects'
 };
-
 var htmlInInnerHtml = {
     'about': [],
     'experience': [],
     'education': [],
     'projects': []
 };
-
-function onLoad(homeTitle) {
-    if (document.title === homeTitle) {
+$(document).ready(function () {
+    if (document.title === 'Milen Georgiev - Software Engineer') {
         setViewsAndNavs();
         appendAllData();
     }
 
     showCookieNotice();
     loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE&maptype=satellite&callback=initMap', function () { });
-}
-
-;
+});
 
 function setViewsAndNavs() {
     $views = {

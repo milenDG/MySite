@@ -17,15 +17,15 @@ let htmlInInnerHtml = {
     'projects': []
 }
 
-function onLoad(homeTitle) {
-    if (document.title === homeTitle) {
+$(document).ready(() => {
+    if (document.title === 'Milen Georgiev - Software Engineer') {
         setViewsAndNavs();
         appendAllData();
     }
 
     showCookieNotice();
     loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB-wmIAGPIA5GYoWHHe8z4H22Gcy0p3rZE&maptype=satellite&callback=initMap', function () {});
-};
+});
 
 function setViewsAndNavs() {
     $views = {
