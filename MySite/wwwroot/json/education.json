@@ -8,7 +8,7 @@
       "width": 300,
       "source": "/svg/university-of-surrey.svg",
       "link": "https://www.surrey.ac.uk/",
-      "alternative": "university-of-surrey.svg",
+      "alternative": "University of Surrey Logo",
       "isRounded": true
     }
   },
@@ -21,7 +21,7 @@
       "width": 300,
       "source": "/image/smg.jpg",
       "link": "https://www.smg.bg/",
-      "alternative": "smg.jpg",
+      "alternative": "Sofia High School of Mathematics (SMG) Logo",
       "isRounded": false
     }
   }

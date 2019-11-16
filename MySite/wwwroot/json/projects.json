@@ -10,7 +10,7 @@
       "width": 150,
       "source": "/image/nato.png",
       "link": "https://eportal.nspa.nato.int/AC135Public/Support/en/Products/NDER/",
-      "alternative": "nato-codification.png",
+      "alternative": "BulCod Military Data Exchange System",
       "isRounded": true
     }
   },
@@ -25,7 +25,7 @@
       "width": 300,
       "source": "/image/regix.png",
       "link": "http://regixaisweb.egov.bg/RegiXInfo/",
-      "alternative": "regix.png",
+      "alternative": "Registry Information Exchange (RegIX) Logo",
       "isRounded": false
     }
   },
@@ -40,7 +40,7 @@
       "width": 150,
       "source": "/image/multi-touch-tester.png",
       "link": "https://github.com/milenDG/MultitouchTester/blob/master/Report.pdf",
-      "alternative": "multi-touch-tester.png",
+      "alternative": "Android Multi Touch Tester Application Logo",
       "isRounded": false
     }
   },
@@ -55,7 +55,7 @@
       "width": 200,
       "source": "/image/arduino.png",
       "link": "https://github.com/milenDG?tab=repositories",
-      "alternative": "arduino.png",
+      "alternative": "Arduino Logo",
       "isRounded": true
     }
   },
@@ -70,7 +70,7 @@
       "width": 300,
       "source": "/image/puzzle-loop.png",
       "link": "https://github.com/milenDG/PuzzleLoopSolver",
-      "alternative": "puzzle-loop.png",
+      "alternative": "Puzzle Loop (Loop the Loop) Logo",
       "isRounded": true
     }
   },
@@ -85,7 +85,7 @@
       "width": 100,
       "source": "/image/football.png",
       "link": "https://github.com/milenDG/Football-Competition-Manager",
-      "alternative": "football.png",
+      "alternative": "Football Management System Logo",
       "isRounded": true
     }
   },
@@ -100,7 +100,7 @@
       "width": 300,
       "source": "/image/chitalishte.jpg",
       "link": "https://chitalishte.wixsite.com/saglasie",
-      "alternative": "chitalishte.svg",
+      "alternative": "Chitalishte Saglasie Village Zhabokrut Logo",
       "isRounded": false
     }
   }

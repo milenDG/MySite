@@ -1,5 +1,18 @@
 [
   {
+    "id": "luggage-logistics",
+    "heading": "Luggage Logistics Ltd.",
+    "secondaryHeading": "Software Engineer - Part-Time &mdash; Nov 2019 &ndash; Now",
+    "description": "<p>I am currently working as a software engineer in Luggage Logistics Ltd. I am part of a team developing a Baggage Management System, used at more than 300 airports and airlines around the world. The system is written in Visual Basic .NET with ASP.NET Web Forms. The company is planning on redesigning and modernizing the system with ASP.NET Core.</p> <p>Working in Luggage Logistics immensely improved and continues to improve my programming skills with many software technologies. Moreover, teamwork and communication are absolutely crucial for achieving necessary results in software developing and Luggage Logistics is a company, which emphasizes on them. Consequently, working at the company improved even more these skills of mine.</p>",
+    "picture": {
+      "width": 500,
+      "source": "/image/luggage-logistics.png",
+      "link": "https://www.luggagelogistics.net/",
+      "alternative": "Luggage Logistics Ltd Logo",
+      "isRounded": true
+    }
+  },
+  {
     "id": "technologica",
     "heading": "Technologica Ltd.",
     "secondaryHeading": "Software Engineer Intern &mdash; Jul 2019 &ndash; Sep 2019",
@@ -8,7 +21,7 @@
       "width": 300,
       "source": "/image/technologica.png",
       "link": "http://www.technologica.com/",
-      "alternative": "technologica.png",
+      "alternative": "Technologica Ltd Logo",
       "isRounded": true
     }
   },
