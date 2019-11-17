@@ -56,6 +56,20 @@
     }
 }
 
+.left-rounded-img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+
+@media (min-width: 768px) {
+    .left-rounded-img {
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 0;
+    }
+}
+
 #footer {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -137,11 +151,6 @@ p {
 
 .rounded-img {
     border-radius: 15px;
-}
-
-.left-rounded-img {
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
 }
 
 .bottom-rounded-img {
