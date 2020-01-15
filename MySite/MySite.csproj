@@ -80,10 +80,10 @@
     <Content Update="wwwroot\image\me-cropped.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\image\me-full.jpg">
+    <Content Update="wwwroot\image\milen_georgiev_full.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\image\me.jpg">
+    <Content Update="wwwroot\image\milen_georgiev.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\image\me2-cropped.jpg">
