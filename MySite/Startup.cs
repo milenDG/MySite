@@ -1,6 +1,5 @@
 ﻿namespace MySite
 {
-    using System.Collections.Generic;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
@@ -8,14 +7,13 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
-    using System.Net;
     using Microsoft.AspNetCore.Rewrite;
-    using Microsoft.AspNetCore.Rewrite.Internal;
+    using Microsoft.Extensions.Hosting;
     using Microsoft.Net.Http.Headers;
 
     public class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
+        public static void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationInsightsTelemetry();
 
@@ -26,7 +24,7 @@
                 {
                     Duration = 86400
                 });
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.Configure<GzipCompressionProviderOptions>(options => {
                 options.Level = CompressionLevel.Fastest;
@@ -41,9 +39,11 @@
                     "image/svg+xml",
                 });
             });
+
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -56,17 +56,13 @@
             }
 
             var rewrite = new RewriteOptions()
-                /*.AddRedirectToWwwPermanent()
-                .AddRedirect("milen\\.azurewebsites\\.net",
-                    "www.milengeorgiev.co.uk",
-                    (int)HttpStatusCode.PermanentRedirect);*/
-                .AddIISUrlRewrite(env.ContentRootFileProvider, "web.config");
+                .AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config");
 
             app.UseRewriter(rewrite);
 
             app.Use(async (ctx, next) =>
             {
-                await next();
+                await next().ConfigureAwait(false);
 
                 if (ctx.Response.StatusCode == 404 && !ctx.Response.HasStarted)
                 {
@@ -74,18 +70,18 @@
                     string originalPath = ctx.Request.Path.Value;
                     ctx.Items["originalPath"] = originalPath;
                     ctx.Request.Path = "/error/404";
-                    await next();
+                    await next().ConfigureAwait(false);
                 }
             });
 
             app.UseResponseCompression();
 
             app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+              {
+                  routes.MapRoute(
+                      name: "default",
+                      template: "{controller=Home}/{action=Index}/{id?}");
+              });
 
             app.UseStaticFiles(new StaticFileOptions
             {
