@@ -53,11 +53,10 @@
             {
                 app.UseExceptionHandler("/error/500");
                 app.UseHsts();
+
+                // Redirect to correct domain
+                app.UseRewriter(new RewriteOptions().AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config"));
             }
-
-            var rewrite = new RewriteOptions().AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config");
-
-            app.UseRewriter(rewrite);
 
             app.Use(async (ctx, next) =>
             {
