@@ -45,7 +45,7 @@
     <Content Update="wwwroot\css\cookieAlert.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\css\customCss.css">
+    <Content Update="wwwroot\css\custom.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\image\arduino.png">

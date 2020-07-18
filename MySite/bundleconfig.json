@@ -2,7 +2,7 @@
   {
     "outputFileName": "wwwroot/min/site.min.css",
     "inputFiles": [
-      "wwwroot/css/customCss.css",
+      "wwwroot/css/custom.css",
       "wwwroot/css/cookieAlert.css"
     ]
   },
