@@ -7,7 +7,6 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
-    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Rewrite;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Net.Http.Headers;
@@ -56,8 +55,7 @@
                 app.UseHsts();
             }
 
-            var rewrite = new RewriteOptions()
-                .AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config");
+            var rewrite = new RewriteOptions().AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config");
 
             app.UseRewriter(rewrite);
 
