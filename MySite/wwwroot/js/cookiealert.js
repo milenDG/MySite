@@ -1,11 +1,11 @@
-function showCookieNotice() {
+$(document).ready(function showCookieNotice() {
     "use strict";
 
     var cookieAlert = document.querySelector(".cookiealert");
     var acceptCookies = document.querySelector(".acceptcookies");
 
     if (!cookieAlert) {
-       return;
+        return;
     }
 
     cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
@@ -18,14 +18,15 @@ function showCookieNotice() {
 
     // When clicking on the agree button, create a 1 year
     // cookie to remember user's choice and close the banner
-    acceptCookies.addEventListener("click", function () {
-        setCookie("acceptCookies", true, 365);
-        cookieAlert.classList.remove("cookieshow");
-        setTimeout(function ()
-        {
-            cookieAlert.classList.add("cookiehide")
-        }, 600);
-    });
+    acceptCookies.addEventListener("click",
+        function() {
+            setCookie("acceptCookies", true, 365);
+            cookieAlert.classList.remove("cookieshow");
+            setTimeout(function() {
+                    cookieAlert.classList.add("cookiehide")
+                },
+                600);
+        });
 
     // Cookie functions from w3schools
     function setCookie(cname, cvalue, exdays) {
@@ -50,4 +51,4 @@ function showCookieNotice() {
         }
         return "";
     }
-}
+});
