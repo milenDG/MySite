@@ -2,14 +2,14 @@
   {
     "outputFileName": "wwwroot/min/site.min.css",
     "inputFiles": [
-      "wwwroot/css/cookieAlert.css",
+      "wwwroot/css/cookiealert.css",
       "wwwroot/css/custom.css"
     ]
   },
   {
     "outputFileName": "wwwroot/min/site.min.js",
     "inputFiles": [
-      "wwwroot/js/cookieAlert.js",
+      "wwwroot/js/cookiealert.js",
       "wwwroot/js/domManipulations.tran.js",
       "wwwroot/js/facebookScript.js",
       "wwwroot/js/linkedIn.js"

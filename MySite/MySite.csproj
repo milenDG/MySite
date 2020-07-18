@@ -42,7 +42,7 @@
     <Content Update="wwwroot\css\bootstrap.min.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\css\cookieAlert.css">
+    <Content Update="wwwroot\css\cookiealert.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\css\custom.css">
@@ -126,7 +126,7 @@
     <Content Update="wwwroot\js\bootstrap.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\js\cookieAlert.js">
+    <Content Update="wwwroot\js\cookiealert.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\js\domManipulations.js">
