@@ -9,7 +9,7 @@
   {
     "outputFileName": "wwwroot/min/site.min.js",
     "inputFiles": [
-      "wwwroot/js/cookiealert.js",
+      "wwwroot/js/cookieAlert.js",
       "wwwroot/js/domManipulations.tran.js",
       "wwwroot/js/facebookScript.js",
       "wwwroot/js/linkedIn.js"
