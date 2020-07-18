@@ -7,6 +7,7 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Rewrite;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Net.Http.Headers;
@@ -52,7 +53,8 @@
             else
             {
                 app.UseExceptionHandler("/error/500");
-                app.UseHsts();
+                //app.UseHsts();
+                app.UseRewriter(new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, 443));
             }
 
             var rewrite = new RewriteOptions()
