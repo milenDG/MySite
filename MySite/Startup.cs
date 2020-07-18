@@ -53,8 +53,7 @@
             else
             {
                 app.UseExceptionHandler("/error/500");
-                //app.UseHsts();
-                app.UseRewriter(new RewriteOptions().AddRedirectToHttps(StatusCodes.Status301MovedPermanently, 443));
+                app.UseHsts();
             }
 
             var rewrite = new RewriteOptions()
