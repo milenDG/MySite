@@ -1,5 +1,20 @@
 [
   {
+    "id": "health-shark",
+    "class": "project-link",
+    "heading": "HealthShark Application for Fitness and Healthy Lifestyle Enthusiasts",
+    "short-heading": "HealthShark",
+    "secondaryHeading": "University of Surrey &mdash; Oct 2019 &ndash; Jun 2020",
+    "description": "<p>A web site for fitness and healthy lifestyle enthusiasts who want to get in the shape they deserve. Developed by a team of 7 students from our Computer Science Course at University of Surrey. My position in the team was Full-Stack Developer. My main responsibilities were to create the Chatting services (using ActionCable - WebSockets), to manage the whole source control of our team and the deployment process. The Web Application was created using Ruby on Rails and is hosted by heroku.com</p><p>For the project we needed to create the whole documentation of the application development through all stages - from requirements and initial planning, to coding and thorough testing. We managed to score a very high (First) score and our teamwork was evaluated to be a great success.</p>",
+    "picture": {
+      "width": 300,
+      "source": "/image/healthshark.png",
+      "link": "https://www.health-shark.co.uk",
+      "alternative": "HealthShark Fitness Application",
+      "isRounded": false
+    }
+  },
+  {
     "id": "nato-bulcod",
     "class": "project-link",
     "heading": "NATO Data Exchange Redesign for Bulgarian NATO Codification Bureau (BulCod)",
