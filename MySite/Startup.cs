@@ -52,7 +52,7 @@
             else
             {
                 app.UseExceptionHandler("/error/500");
-                app.UseHttpsRedirection();
+                //app.UseHttpsRedirection();
 
                 // Redirect to correct domain
                 app.UseRewriter(new RewriteOptions().AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config"));
