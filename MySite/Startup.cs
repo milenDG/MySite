@@ -7,6 +7,7 @@
     using Microsoft.AspNetCore.ResponseCompression;
     using System.IO.Compression;
     using System.Linq;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Rewrite;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Net.Http.Headers;
@@ -41,6 +42,12 @@
             });
 
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+                options.HttpsPort = 443;
+            });
         }
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -56,7 +63,10 @@
 
                 // Redirect to correct domain
                 app.UseRewriter(new RewriteOptions().AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config"));
+                app.UseHsts();
             }
+
+            app.UseHttpsRedirection();
 
             app.Use(async (ctx, next) =>
             {
