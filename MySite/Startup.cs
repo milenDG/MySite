@@ -63,7 +63,7 @@
 
                 // Redirect to correct domain
                 app.UseRewriter(new RewriteOptions().AddIISUrlRewrite(env?.ContentRootFileProvider, "web.config"));
-                app.UseHsts();
+                //app.UseHsts();
             }
 
             app.UseHttpsRedirection();
