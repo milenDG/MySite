@@ -84,7 +84,7 @@
     <Content Update="wwwroot\image\milen_georgiev_full.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\image\milen_georgiev.jpg">
+    <Content Update="wwwroot\image\milen_georgiev2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="wwwroot\image\me2-cropped.jpg">
