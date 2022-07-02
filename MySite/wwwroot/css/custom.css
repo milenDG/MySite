@@ -77,6 +77,14 @@
     color: #B7C8CA
 }
 
+    #footer a:visited {
+        color: #c2a60d !important;
+    }
+
+    #footer p {
+        color: #B7C8CA;
+    }
+
 #text-content-holder {
     background-color: #94AEB1;
     color: #154047;
@@ -149,8 +157,8 @@ a > .svg {
 }
 
 h1 {
-    background-color: #B3C4C7;
-    padding: 10px;
+    background-color: #B3C4C7 !important;
+    padding: 10px !important;
 }
 
 h4 {
@@ -251,6 +259,7 @@ mark {
     color: white;
     font-family: Consolas;
     font-size: 22px;
+    margin-left: 5px;
 }
 
     .navbar-brand:hover {
@@ -267,3 +276,7 @@ mark {
         color: lightgoldenrodyellow !important;
         transition: 300ms;
     }
+
+.form-control {
+    font-size: 1.5rem !important;
+}

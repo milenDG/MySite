@@ -1,9 +1,10 @@
-﻿let currentView = 'about';
+﻿let currentView = 'development';
 let $views = {};
 let $navs = {};
 let highlighted = false;
 
 let idToHeading = {
+    'development': 'MG DEV Ltd.',
     'about': 'About me',
     'experience': 'Experience',
     'education': 'Education',
@@ -11,6 +12,7 @@ let idToHeading = {
 };
 
 let htmlInInnerHtml = {
+    'development': [],
     'about': [],
     'experience': [],
     'education': [],
@@ -28,6 +30,7 @@ $(document).ready(() => {
 
 function setViewsAndNavs() {
     $views = {
+        'development': $('#development'),
         'about': $('#about'),
         'experience': $('#experience'),
         'education': $('#education'),
@@ -36,6 +39,7 @@ function setViewsAndNavs() {
     };
 
     $navs = {
+        'development': $('#development-nav'),
         'about': $('#about-nav'),
         'experience': $('#experience-nav'),
         'education': $('#education-nav'),
@@ -45,6 +49,11 @@ function setViewsAndNavs() {
 }
 
 function appendAllData() {
+    $.getJSON('/json/development.json',
+        (json) => {
+            appendSingleData(json, $('#development'));
+            findHtmlInInnerHtml('development');
+        });
     $.getJSON('/json/about.json',
         (json) => {
             appendSingleData(json, $('#about-text'));

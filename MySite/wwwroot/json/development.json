@@ -1,0 +1,15 @@
+[
+  {
+    "id": "development-text",
+    "heading": "MG DEV Ltd.",
+    "secondaryHeading": "Web and Mobile Software Development for the Aviation Industry",
+    "description": "<p>Opened in June 2022, the company successfully operates in the Software Development Industry and has an ongoing contract with one of the leaders in the Aviation Logistics Software Market &mdash; <a href=\"www.luggagelogistics.net\" target=\"_blank\"><strong>Luggage Logistics Ltd.</strong></p>",
+    "picture": {
+      "width": 300,
+      "source": "/image/logo_MG_DEV.png",
+      "link": "https://www.linkedin.com/company/mg-dev-ltd",
+      "alternative": "MG DEV Ltd. Logo",
+      "isRounded": true
+    }
+  }
+]
